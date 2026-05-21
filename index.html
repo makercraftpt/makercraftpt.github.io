@@ -627,6 +627,202 @@ footer .f-sprint{
   .lvl-blue   {background: var(--blue);}
   .lvl-empty  {background: #e2e8f0;}
 
+
+  /* ── SPRINT 4 — SOBRE + IMPACTO ── */
+
+  .s4-sobre {
+    padding: 5rem 1.5rem;
+    background: var(--bg);
+    position: relative;
+  }
+
+  .sobre-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  /* foto */
+  .sobre-foto-wrap {
+    position: relative;
+  }
+  .sobre-foto-frame {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 3px solid var(--green-pale);
+    box-shadow: 0 16px 48px rgba(74,222,128,0.15);
+  }
+  .sobre-foto-frame img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    height: 420px;
+    filter: saturate(1.05);
+  }
+  /* pixel badge sobre a foto */
+  .sobre-foto-badge {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    color: #fff;
+    font-family: var(--pixel);
+    font-size: 0.38rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 4px 0 #15803d;
+    letter-spacing: 0.05em;
+  }
+  /* decorative pixel blocks */
+  .sobre-deco {
+    position: absolute;
+    border-radius: 3px;
+    animation: iconPixelBob 2.5s ease-in-out infinite;
+  }
+  .sobre-deco-1 {
+    width: 18px; height: 18px;
+    background: #fbbf24;
+    top: -10px; right: -10px;
+    animation-delay: 0s;
+  }
+  .sobre-deco-2 {
+    width: 12px; height: 12px;
+    background: #38bdf8;
+    bottom: 20px; right: -14px;
+    animation-delay: 0.6s;
+  }
+  .sobre-deco-3 {
+    width: 14px; height: 14px;
+    background: #a78bfa;
+    top: 40%; left: -14px;
+    animation-delay: 0.3s;
+  }
+
+  /* texto lado direito */
+  .sobre-texto {
+    padding-top: 0.5rem;
+  }
+  .sobre-texto .s2-eyebrow {
+    text-align: left;
+    margin-bottom: 0.6rem;
+  }
+  .sobre-texto h2 {
+    font-family: var(--sans);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+  .sobre-cargo {
+    font-family: var(--pixel);
+    font-size: 0.4rem;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.4rem;
+    display: block;
+  }
+  .sobre-texto p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .sobre-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.2rem;
+  }
+  .chip {
+    font-family: var(--pixel);
+    font-size: 0.35rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    border: 1.5px solid;
+  }
+  .chip-g { background: var(--green-pale); color: var(--green); border-color: #bbf7d0; }
+  .chip-b { background: #dbeafe; color: #1d4ed8; border-color: #93c5fd; }
+  .chip-y { background: #fef9c3; color: #a16207; border-color: #fde047; }
+  .chip-p { background: #ede9fe; color: #6d28d9; border-color: #c4b5fd; }
+
+  /* ── IMPACTO ── */
+  .s4-impacto {
+    padding: 5rem 1.5rem;
+    background: var(--green);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .s4-impacto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .impacto-eyebrow {
+    font-family: var(--pixel);
+    font-size: 0.42rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.12em;
+    margin-bottom: 0.8rem;
+  }
+  .impacto-h2 {
+    font-family: var(--sans);
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .impacto-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+  }
+  .impacto-cta {
+    font-family: var(--pixel);
+    font-size: 0.52rem;
+    background: #fff;
+    color: var(--green);
+    padding: 1rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 5px 0 #15803d;
+    transition: transform 0.1s, box-shadow 0.1s;
+    letter-spacing: 0.03em;
+  }
+  .impacto-cta:hover { transform: translateY(2px); box-shadow: 0 3px 0 #15803d; }
+  .impacto-cta:active { transform: translateY(5px); box-shadow: none; }
+
+  /* responsive sobre */
+  @media (max-width: 640px) {
+    .sobre-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .sobre-foto-frame img { height: 300px; }
+    .sobre-texto .s2-eyebrow { text-align: center; }
+    .sobre-texto h2 { text-align: center; }
+    .sobre-cargo { text-align: center; }
+    .sobre-chips { justify-content: center; }
+  }
+
 </style>
 </head>
 <body>
@@ -636,7 +832,7 @@ footer .f-sprint{
   <div class="nav-logo">
     <span class="pick">⛏</span> MakerCraft
   </div>
-  <div style="display:flex;gap:0.6rem;align-items:center;"><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#solucao">SOBRE</a><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#projetos">PROJETOS</a><a class="nav-btn" href="#contacto">▶ CONTACTO</a></div>
+  <div style="display:flex;gap:0.6rem;align-items:center;"><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#sobre">SOBRE</a><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#projetos">PROJETOS</a><a class="nav-btn" href="#contacto">▶ CONTACTO</a></div>
 </nav>
 
 <!-- HERO -->
@@ -863,6 +1059,51 @@ footer .f-sprint{
 </section>
 
 
+
+<!-- SPRINT 4: SOBRE -->
+<section class="s4-sobre" id="sobre">
+  <div class="sobre-inner">
+
+    <div class="sobre-foto-wrap">
+      <div class="sobre-foto-frame">
+        <img src="foto-belmiro.jpg" alt="Belmiro Luís a apresentar num evento Smart Rural Fablab">
+        <span class="sobre-foto-badge">⛏ MAKER · PROFESSOR · FACILITADOR</span>
+      </div>
+      <div class="sobre-deco sobre-deco-1"></div>
+      <div class="sobre-deco sobre-deco-2"></div>
+      <div class="sobre-deco sobre-deco-3"></div>
+    </div>
+
+    <div class="sobre-texto">
+      <p class="s2-eyebrow">// SECÇÃO 6 — SOBRE</p>
+      <h2>Belmiro Luís</h2>
+      <span class="sobre-cargo">// PROFESSOR · MAKER · FACILITADOR</span>
+      <p>Belmiro Luís é professor, maker e facilitador de projetos educativos e tecnológicos ligados à eletrónica, programação, fabricação digital e empreendedorismo.</p>
+      <p>Tem experiência em ensino técnico, projetos europeus, formação prática e desenvolvimento de iniciativas maker com escolas, jovens e comunidades.</p>
+      <div class="sobre-chips">
+        <span class="chip chip-g">Arduino & IoT</span>
+        <span class="chip chip-g">Impressão 3D</span>
+        <span class="chip chip-b">Python</span>
+        <span class="chip chip-b">CAD</span>
+        <span class="chip chip-y">STEAM</span>
+        <span class="chip chip-y">Workshops</span>
+        <span class="chip chip-p">Projetos Europeus</span>
+        <span class="chip chip-p">FabLab</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPRINT 4: IMPACTO -->
+<section class="s4-impacto" id="impacto">
+  <p class="impacto-eyebrow">// SECÇÃO 5 — O OBJETIVO</p>
+  <h2 class="impacto-h2">Transformar ideias<br>em projetos reais.</h2>
+  <p class="impacto-desc">Criar oportunidades reais através da educação prática, da tecnologia e da capacidade de transformar ideias em projetos concretos — para jovens, escolas e comunidades.</p>
+  <a class="impacto-cta" href="#contacto">⛏ VAMOS CONSTRUIR JUNTOS</a>
+</section>
+
+
 <!-- CONTACTO -->
 <section id="contacto">
   <p class="section-eyebrow">// VAMOS CONSTRUIR JUNTOS</p>
@@ -892,7 +1133,7 @@ footer .f-sprint{
 <footer>
   <span class="f-logo">⛏ MakerCraft</span>
   Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
-  <br><span class="f-sprint">▸ SPRINT 3 / 5</span>
+  <br><span class="f-sprint">▸ SPRINT 4 / 5</span>
 </footer>
 
 <script>
