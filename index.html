@@ -509,6 +509,124 @@ footer .f-sprint{
   }
   .pd { width: 10px; height: 10px; border-radius: 2px; }
 
+
+  /* ── SPRINT 3 — PROJETOS ── */
+  .s3-section {
+    padding: 5rem 1.5rem;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* fundo com grid subtil */
+  .s3-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(74,222,128,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74,222,128,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  .s3-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    position: relative;
+  }
+
+  .proj-card {
+    background: var(--bg);
+    border: 2px solid var(--green-pale);
+    border-radius: 14px;
+    padding: 1.6rem 1.4rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    opacity: 0;
+    transform: translateY(24px);
+    cursor: default;
+  }
+  .proj-card.visible {
+    animation: cardReveal 0.5s ease forwards;
+  }
+  .proj-card:nth-child(2){animation-delay:0.08s;}
+  .proj-card:nth-child(3){animation-delay:0.16s;}
+  .proj-card:nth-child(4){animation-delay:0.24s;}
+  .proj-card:nth-child(5){animation-delay:0.32s;}
+  .proj-card:nth-child(6){animation-delay:0.40s;}
+
+  .proj-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(74,222,128,0.15);
+    border-color: var(--green-l);
+  }
+
+  /* bloco pixel no canto */
+  .proj-card::after {
+    content: '';
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 10px; height: 10px;
+    border-radius: 2px;
+    animation: iconPixelBob 2.2s ease-in-out infinite;
+  }
+  .proj-card:nth-child(1)::after{background:#4ade80;animation-delay:0s;}
+  .proj-card:nth-child(2)::after{background:#fbbf24;animation-delay:0.3s;}
+  .proj-card:nth-child(3)::after{background:#38bdf8;animation-delay:0.6s;}
+  .proj-card:nth-child(4)::after{background:#fb923c;animation-delay:0.2s;}
+  .proj-card:nth-child(5)::after{background:#a78bfa;animation-delay:0.5s;}
+  .proj-card:nth-child(6)::after{background:#f472b6;animation-delay:0.4s;}
+
+  .proj-emoji {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  .proj-num {
+    font-family: var(--pixel);
+    font-size: 0.35rem;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .proj-title {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .proj-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .proj-level {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 1rem;
+    font-family: var(--pixel);
+    font-size: 0.33rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  .proj-level-dot {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+  }
+  .lvl-green  {background: var(--green);}
+  .lvl-yellow {background: var(--yellow);}
+  .lvl-blue   {background: var(--blue);}
+  .lvl-empty  {background: #e2e8f0;}
+
 </style>
 </head>
 <body>
@@ -518,7 +636,7 @@ footer .f-sprint{
   <div class="nav-logo">
     <span class="pick">⛏</span> MakerCraft
   </div>
-  <div style="display:flex;gap:0.6rem;align-items:center;"><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#solucao">SOBRE</a><a class="nav-btn" href="#contacto">▶ CONTACTO</a></div>
+  <div style="display:flex;gap:0.6rem;align-items:center;"><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#solucao">SOBRE</a><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#projetos">PROJETOS</a><a class="nav-btn" href="#contacto">▶ CONTACTO</a></div>
 </nav>
 
 <!-- HERO -->
@@ -551,7 +669,7 @@ footer .f-sprint{
 
   <div class="hero-btns">
     <a class="btn-green" href="#contacto">⛏ FALAR SOBRE UM PROJETO</a>
-    <a class="btn-outline" href="#contacto">▶ VER PROJETOS</a>
+    <a class="btn-outline" href="#projetos">▶ VER PROJETOS</a>
   </div>
 
   <!-- BLOCK GROUND -->
@@ -648,6 +766,103 @@ footer .f-sprint{
 </section>
 
 
+
+<!-- SPRINT 3: PROJETOS -->
+<section class="s3-section" id="projetos">
+  <p class="s2-eyebrow">// SECÇÃO 4</p>
+  <h2 class="s2-h2">Projetos e Atividades</h2>
+  <p class="s2-desc">Cada projeto é uma aventura real — com ferramentas, desafios e resultados que podes ver, tocar e mostrar.</p>
+
+  <div class="s3-grid">
+
+    <div class="proj-card" data-card>
+      <span class="proj-emoji">⚡</span>
+      <span class="proj-num">// 01</span>
+      <p class="proj-title">Workshops Arduino & IoT</p>
+      <p class="proj-desc">Projetos práticos de sensores, automação e programação. Constrói o teu primeiro dispositivo conectado.</p>
+      <span class="proj-level">
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        &nbsp;NÍVEL INTERMÉDIO
+      </span>
+    </div>
+
+    <div class="proj-card" data-card>
+      <span class="proj-emoji">🖨️</span>
+      <span class="proj-num">// 02</span>
+      <p class="proj-title">Impressão 3D & Fabricação Digital</p>
+      <p class="proj-desc">Criação de peças, protótipos e objetos personalizados. Da ideia ao objeto físico em horas.</p>
+      <span class="proj-level">
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        &nbsp;NÍVEL BÁSICO
+      </span>
+    </div>
+
+    <div class="proj-card" data-card>
+      <span class="proj-emoji">🐍</span>
+      <span class="proj-num">// 03</span>
+      <p class="proj-title">MakerCraft Python</p>
+      <p class="proj-desc">Aprendizagem de programação através da criação de jogos e projetos visuais. Código que dá prazer fazer.</p>
+      <span class="proj-level">
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        &nbsp;NÍVEL INICIANTE
+      </span>
+    </div>
+
+    <div class="proj-card" data-card>
+      <span class="proj-emoji">🔌</span>
+      <span class="proj-num">// 04</span>
+      <p class="proj-title">Formação Técnica</p>
+      <p class="proj-desc">Eletrónica, sistemas embebidos, CAD, FreeRTOS e tecnologias digitais para quem quer ir mais fundo.</p>
+      <span class="proj-level">
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-green"></span>
+        &nbsp;NÍVEL AVANÇADO
+      </span>
+    </div>
+
+    <div class="proj-card" data-card>
+      <span class="proj-emoji">🏫</span>
+      <span class="proj-num">// 05</span>
+      <p class="proj-title">Educação Maker</p>
+      <p class="proj-desc">Atividades STEAM para escolas, jovens e comunidades. Aprender fazendo, sempre com propósito.</p>
+      <span class="proj-level">
+        <span class="proj-level-dot lvl-green"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        &nbsp;TODOS OS NÍVEIS
+      </span>
+    </div>
+
+    <div class="proj-card" data-card>
+      <span class="proj-emoji">🌱</span>
+      <span class="proj-num">// 06</span>
+      <p class="proj-title">Inovação Social & NEET</p>
+      <p class="proj-desc">Projetos de capacitação e inclusão através da aprendizagem prática. Tecnologia ao serviço de quem mais precisa.</p>
+      <span class="proj-level">
+        <span class="proj-level-dot lvl-yellow"></span>
+        <span class="proj-level-dot lvl-yellow"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        <span class="proj-level-dot lvl-empty"></span>
+        &nbsp;NÍVEL BÁSICO
+      </span>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- CONTACTO -->
 <section id="contacto">
   <p class="section-eyebrow">// VAMOS CONSTRUIR JUNTOS</p>
@@ -677,7 +892,7 @@ footer .f-sprint{
 <footer>
   <span class="f-logo">⛏ MakerCraft</span>
   Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
-  <br><span class="f-sprint">▸ SPRINT 2 / 5</span>
+  <br><span class="f-sprint">▸ SPRINT 3 / 5</span>
 </footer>
 
 <script>
