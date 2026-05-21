@@ -682,27 +682,14 @@ footer .f-sprint{
   .sobre-foto-frame img {
     width: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
-    height: 520px;
+    height: auto;
+    max-height: 560px;
+    background: var(--bg);
     filter: saturate(1.05);
   }
-  /* pixel badge sobre a foto */
-  .sobre-foto-badge {
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--green);
-    color: #fff;
-    font-family: var(--pixel);
-    font-size: 0.38rem;
-    padding: 0.4rem 0.9rem;
-    border-radius: 4px;
-    white-space: nowrap;
-    box-shadow: 0 4px 0 #15803d;
-    letter-spacing: 0.05em;
-  }
+
   /* decorative pixel blocks */
   .sobre-deco {
     position: absolute;
@@ -839,7 +826,7 @@ footer .f-sprint{
       grid-template-columns: 1fr;
       gap: 2rem;
     }
-    .sobre-foto-frame img { height: 380px; object-position: center center; }
+    .sobre-foto-frame img { height: auto; max-height: 420px; object-fit: contain; }
     .sobre-texto .s2-eyebrow { text-align: center; }
     .sobre-texto h2 { text-align: center; }
     .sobre-cargo { text-align: center; }
@@ -1150,7 +1137,6 @@ footer .f-sprint{
     <div class="sobre-foto-wrap">
       <div class="sobre-foto-frame">
         <img src="foto-belmiro.jpg" alt="Belmiro Luís a apresentar num evento Smart Rural Fablab">
-        <span class="sobre-foto-badge">⛏ MAKER · PROFESSOR · FACILITADOR</span>
       </div>
       <div class="sobre-deco sobre-deco-1"></div>
       <div class="sobre-deco sobre-deco-2"></div>
