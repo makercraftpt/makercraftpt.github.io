@@ -346,6 +346,169 @@ footer .f-sprint{
   nav{padding:0.7rem 1rem;}
   .gb{width:30px;height:30px;}
 }
+
+  /* ── SPRINT 2 — PROBLEMA / SOLUÇÃO ── */
+
+  .s2-section {
+    padding: 5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .s2-problema { background: #fff; }
+  .s2-solucao  { background: var(--bg); }
+
+  .s2-eyebrow {
+    font-family: var(--pixel);
+    font-size: 0.42rem;
+    color: var(--green);
+    letter-spacing: 0.12em;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+  .s2-h2 {
+    font-family: var(--sans);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
+  .s2-desc {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0 auto 1.4rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  /* ── PROBLEMA: quote block ── */
+  .problema-quote {
+    max-width: 640px;
+    margin: 2rem auto 0;
+    background: var(--green-pale);
+    border-left: 5px solid var(--green);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 2rem;
+    position: relative;
+  }
+  .problema-quote::before {
+    content: '"';
+    font-family: var(--pixel);
+    font-size: 2.5rem;
+    color: var(--green-l);
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    line-height: 1;
+  }
+  .problema-quote p {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.8;
+    font-style: italic;
+  }
+  .problema-quote p + p { margin-top: 0.8rem; }
+
+  /* ── SOLUÇÃO: 3 cards ── */
+  .solucao-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    max-width: 860px;
+    margin: 2.5rem auto 0;
+  }
+  .sol-card {
+    background: #fff;
+    border: 2px solid var(--green-pale);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .sol-card.visible {
+    animation: cardReveal 0.5s ease forwards;
+  }
+  .sol-card:nth-child(2) { animation-delay: 0.12s; }
+  .sol-card:nth-child(3) { animation-delay: 0.24s; }
+
+  @keyframes cardReveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sol-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--green-l);
+    box-shadow: 0 12px 32px rgba(74,222,128,0.18);
+  }
+
+  .sol-icon {
+    width: 64px; height: 64px;
+    margin: 0 auto 1.2rem;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem;
+    position: relative;
+  }
+  .sol-icon-maker  { background: #dcfce7; }
+  .sol-icon-steam  { background: #dbeafe; }
+  .sol-icon-empr   { background: #fef9c3; }
+
+  /* pixel decoration on icon */
+  .sol-icon::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; right: -4px;
+    width: 12px; height: 12px;
+    border-radius: 2px;
+    animation: iconPixelBob 2s ease-in-out infinite;
+  }
+  .sol-icon-maker::after  { background: var(--green-l); }
+  .sol-icon-steam::after  { background: #93c5fd; }
+  .sol-icon-empr::after   { background: #fde047; }
+  @keyframes iconPixelBob {
+    0%,100%{ transform: translateY(0); }
+    50%    { transform: translateY(-4px); }
+  }
+
+  .sol-card h3 {
+    font-family: var(--pixel);
+    font-size: 0.52rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .sol-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .sol-card .sol-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .sol-tag {
+    font-family: var(--pixel);
+    font-size: 0.35rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+  .tag-green  { background: var(--green-pale); color: var(--green); }
+  .tag-blue   { background: #dbeafe; color: #1d4ed8; }
+  .tag-yellow { background: #fef9c3; color: #a16207; }
+
+  /* divider pixel row */
+  .pixel-divider {
+    display: flex; justify-content: center; gap: 3px;
+    padding: 0.5rem 0;
+  }
+  .pd { width: 10px; height: 10px; border-radius: 2px; }
+
 </style>
 </head>
 <body>
@@ -355,7 +518,7 @@ footer .f-sprint{
   <div class="nav-logo">
     <span class="pick">⛏</span> MakerCraft
   </div>
-  <a class="nav-btn" href="#contacto">▶ CONTACTO</a>
+  <div style="display:flex;gap:0.6rem;align-items:center;"><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#solucao">SOBRE</a><a class="nav-btn" href="#contacto">▶ CONTACTO</a></div>
 </nav>
 
 <!-- HERO -->
@@ -409,6 +572,82 @@ footer .f-sprint{
 
 </section>
 
+
+<!-- SPRINT 2: O PROBLEMA -->
+<section class="s2-section s2-problema" id="problema">
+  <p class="s2-eyebrow">// SECÇÃO 2</p>
+  <h2 class="s2-h2">Porque é que isto importa?</h2>
+  <p class="s2-desc">Há um problema real nas salas de aula, nas escolas e nas comunidades.</p>
+
+  <div class="problema-quote">
+    <p>Muitos jovens passam anos a aprender teoria sem nunca criarem projetos reais, resolverem problemas concretos ou desenvolverem autonomia, criatividade e iniciativa.</p>
+    <p>Ao mesmo tempo, escolas, municípios e comunidades procuram novas formas de envolver jovens, desenvolver competências e criar oportunidades.</p>
+  </div>
+
+  <div class="pixel-divider" style="margin-top:2.5rem;">
+    <div class="pd" style="background:#4ade80;"></div>
+    <div class="pd" style="background:#fbbf24;"></div>
+    <div class="pd" style="background:#38bdf8;"></div>
+    <div class="pd" style="background:#fb923c;"></div>
+    <div class="pd" style="background:#a78bfa;"></div>
+    <div class="pd" style="background:#4ade80;"></div>
+    <div class="pd" style="background:#fbbf24;"></div>
+  </div>
+</section>
+
+<!-- SPRINT 2: A SOLUÇÃO -->
+<section class="s2-section s2-solucao" id="solucao">
+  <p class="s2-eyebrow">// SECÇÃO 3</p>
+  <h2 class="s2-h2">O que é o MakerCraft?</h2>
+  <p class="s2-desc">O MakerCraft junta educação prática, tecnologia e empreendedorismo para criar experiências de aprendizagem mais motivadoras, úteis e próximas do mundo real.</p>
+
+  <div class="solucao-cards">
+
+    <div class="sol-card" data-card>
+      <div class="sol-icon sol-icon-maker">🔧</div>
+      <h3>Maker &amp;<br>Prototipagem</h3>
+      <p>Arduino, eletrónica, impressão 3D, IoT, fabricação digital e criação prática.</p>
+      <div class="sol-tags">
+        <span class="sol-tag tag-green">Arduino</span>
+        <span class="sol-tag tag-green">3D Print</span>
+        <span class="sol-tag tag-green">IoT</span>
+      </div>
+    </div>
+
+    <div class="sol-card" data-card>
+      <div class="sol-icon sol-icon-steam">🔬</div>
+      <h3>STEAM &amp;<br>Tecnologia</h3>
+      <p>Aprendizagem baseada em projetos nas áreas da ciência, tecnologia, engenharia e programação.</p>
+      <div class="sol-tags">
+        <span class="sol-tag tag-blue">Python</span>
+        <span class="sol-tag tag-blue">Robótica</span>
+        <span class="sol-tag tag-blue">CAD</span>
+      </div>
+    </div>
+
+    <div class="sol-card" data-card>
+      <div class="sol-icon sol-icon-empr">🚀</div>
+      <h3>Empreendedorismo<br>Jovem</h3>
+      <p>Desenvolvimento de autonomia, criatividade, resolução de problemas e espírito empreendedor.</p>
+      <div class="sol-tags">
+        <span class="sol-tag tag-yellow">Projetos</span>
+        <span class="sol-tag tag-yellow">Ideias</span>
+        <span class="sol-tag tag-yellow">Futuro</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ESPAÇO FOTO -->
+  <div style="max-width:860px;margin:3rem auto 0;background:#fff;border:2px dashed #bbf7d0;border-radius:16px;padding:2.5rem;text-align:center;">
+    <div style="width:100px;height:100px;border-radius:50%;background:var(--green-pale);border:3px dashed #86efac;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">📷</div>
+    <p style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);letter-spacing:0.08em;">// FOTO AQUI — SPRINT 4</p>
+    <p style="font-size:0.85rem;color:var(--muted);margin-top:0.4rem;">Belmiro Luís · Professor, Maker e Facilitador</p>
+  </div>
+
+</section>
+
+
 <!-- CONTACTO -->
 <section id="contacto">
   <p class="section-eyebrow">// VAMOS CONSTRUIR JUNTOS</p>
@@ -438,7 +677,7 @@ footer .f-sprint{
 <footer>
   <span class="f-logo">⛏ MakerCraft</span>
   Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
-  <br><span class="f-sprint">▸ SPRINT 1 / 5</span>
+  <br><span class="f-sprint">▸ SPRINT 2 / 5</span>
 </footer>
 
 <script>
@@ -475,6 +714,19 @@ for (let i = 0; i < 18; i++) {
   `;
   hero.appendChild(b);
 }
+
+// Scroll reveal for solution cards
+const cards = document.querySelectorAll('[data-card]');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+cards.forEach(c => observer.observe(c));
+
 </script>
 </body>
 </html>
