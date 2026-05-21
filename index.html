@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MakerCraft — Educação Maker, STEAM e Empreendedorismo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green:      #16a34a;
+  --green-l:    #4ade80;
+  --green-pale: #dcfce7;
+  --yellow:     #fbbf24;
+  --blue:       #38bdf8;
+  --orange:     #fb923c;
+  --purple:     #a78bfa;
+  --bg:         #f8fafc;
+  --bg2:        #ffffff;
+  --text:       #0f172a;
+  --muted:      #64748b;
+  --pixel:      'Press Start 2P', monospace;
+  --sans:       'DM Sans', sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.9rem 2rem;
+  background:rgba(248,250,252,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:2px solid var(--green-pale);
+}
+.nav-logo{
+  font-family:var(--pixel);font-size:0.62rem;
+  color:var(--green);letter-spacing:0.04em;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.nav-logo .pick{
+  display:inline-block;
+  animation:pickWiggle 2.5s ease-in-out infinite;
+}
+@keyframes pickWiggle{
+  0%,100%{transform:rotate(-10deg);}
+  50%{transform:rotate(10deg);}
+}
+.nav-btn{
+  font-family:var(--pixel);font-size:0.48rem;
+  background:var(--green);color:#fff;
+  border:none;padding:0.65rem 1.1rem;cursor:pointer;
+  text-decoration:none;display:inline-block;
+  border-radius:4px;
+  box-shadow:0 4px 0 #15803d;
+  transition:transform 0.1s,box-shadow 0.1s;
+  letter-spacing:0.03em;
+}
+.nav-btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #15803d;}
+.nav-btn:active{transform:translateY(4px);box-shadow:none;}
+
+/* ── HERO ── */
+#hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:7rem 1.5rem 3rem;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* animated radial glow */
+#hero::before{
+  content:'';
+  position:absolute;
+  top:-10%;left:50%;
+  transform:translateX(-50%);
+  width:900px;height:600px;
+  background:radial-gradient(ellipse at center, rgba(74,222,128,0.18) 0%, rgba(248,250,252,0) 70%);
+  pointer-events:none;
+  animation:glowPulse 4s ease-in-out infinite;
+}
+@keyframes glowPulse{
+  0%,100%{opacity:0.7;transform:translateX(-50%) scale(1);}
+  50%{opacity:1;transform:translateX(-50%) scale(1.08);}
+}
+
+/* confetti blocks */
+.confetti-block{
+  position:absolute;
+  width:18px;height:18px;
+  border-radius:3px;
+  animation:confettiFall linear infinite;
+  opacity:0;
+}
+@keyframes confettiFall{
+  0%  {transform:translateY(-60px) rotate(0deg);opacity:0;}
+  10% {opacity:0.7;}
+  90% {opacity:0.5;}
+  100%{transform:translateY(110vh) rotate(360deg);opacity:0;}
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--pixel);font-size:0.42rem;
+  color:var(--green);
+  background:var(--green-pale);
+  border:1.5px solid #bbf7d0;
+  padding:0.4rem 0.9rem;border-radius:4px;
+  margin-bottom:1.8rem;letter-spacing:0.1em;
+  animation:fadeUp 0.5s ease both;
+}
+
+.hero-title{
+  animation:fadeUp 0.6s 0.1s ease both;
+  margin-bottom:0.3em;
+  line-height:1;
+}
+.hero-title .maker{
+  font-family:var(--sans);font-size:clamp(3rem,8vw,5.5rem);
+  font-weight:700;color:var(--text);
+  letter-spacing:-0.02em;
+}
+.hero-title .craft{
+  font-family:var(--pixel);font-size:clamp(1.6rem,5vw,3.2rem);
+  color:var(--green);
+  text-shadow:0 0 0 transparent;
+  display:inline-block;
+  animation:craftPop 0.5s 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes craftPop{
+  0%{transform:scale(0.5) rotate(-4deg);opacity:0;}
+  70%{transform:scale(1.1) rotate(1deg);}
+  100%{transform:scale(1) rotate(0deg);opacity:1;}
+}
+
+.hero-sub-line{
+  font-family:var(--pixel);font-size:0.48rem;
+  color:var(--muted);letter-spacing:0.06em;
+  margin-bottom:1.4rem;
+  animation:fadeUp 0.6s 0.2s ease both;
+}
+
+.hero-desc{
+  font-size:1.1rem;color:var(--muted);
+  max-width:520px;line-height:1.75;
+  margin:0 auto 2.2rem;
+  animation:fadeUp 0.6s 0.3s ease both;
+}
+
+/* ── XP BAR ── */
+.xp-bar-wrap{
+  width:min(340px,90%);margin:0 auto 2.4rem;
+  animation:fadeUp 0.6s 0.35s ease both;
+}
+.xp-label{
+  display:flex;justify-content:space-between;
+  font-family:var(--pixel);font-size:0.38rem;
+  color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.05em;
+}
+.xp-track{
+  height:14px;background:#e2e8f0;border-radius:3px;
+  overflow:hidden;border:1.5px solid #cbd5e1;
+}
+.xp-fill{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,var(--green-l),var(--green));
+  border-radius:2px;
+  transition:width 1.8s cubic-bezier(0.22,1,0.36,1);
+  position:relative;
+}
+.xp-fill::after{
+  content:'';position:absolute;right:0;top:0;bottom:0;width:6px;
+  background:rgba(255,255,255,0.5);
+  animation:xpShine 1s 2s ease forwards;
+}
+@keyframes xpShine{
+  0%{opacity:1;}100%{opacity:0;right:-10px;}
+}
+
+.hero-btns{
+  display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;
+  animation:fadeUp 0.6s 0.4s ease both;
+}
+.btn-green{
+  font-family:var(--pixel);font-size:0.5rem;
+  background:var(--green);color:#fff;
+  padding:1rem 1.6rem;border-radius:4px;
+  text-decoration:none;display:inline-block;
+  box-shadow:0 5px 0 #15803d;
+  transition:transform 0.1s,box-shadow 0.1s;
+  letter-spacing:0.03em;
+}
+.btn-green:hover{transform:translateY(2px);box-shadow:0 3px 0 #15803d;}
+.btn-green:active{transform:translateY(5px);box-shadow:none;}
+
+.btn-outline{
+  font-family:var(--pixel);font-size:0.5rem;
+  background:#fff;color:var(--green);
+  padding:1rem 1.6rem;border-radius:4px;
+  text-decoration:none;display:inline-block;
+  border:2px solid var(--green-pale);
+  box-shadow:0 5px 0 #bbf7d0;
+  transition:transform 0.1s,box-shadow 0.1s;
+  letter-spacing:0.03em;
+}
+.btn-outline:hover{transform:translateY(2px);box-shadow:0 3px 0 #bbf7d0;border-color:#86efac;}
+.btn-outline:active{transform:translateY(5px);box-shadow:none;}
+
+/* ── BLOCK GROUND ── */
+.block-ground{
+  position:relative;
+  z-index:1;
+  margin-top:3rem;
+  display:flex;justify-content:center;gap:4px;
+  animation:fadeUp 0.6s 0.5s ease both;
+}
+.gb{
+  width:42px;height:42px;border-radius:3px;
+  position:relative;overflow:hidden;
+  animation:blockBounce ease-in-out infinite;
+}
+@keyframes blockBounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+}
+.gb-g{background:#22c55e;box-shadow:inset -4px -5px 0 #15803d,inset 4px 5px 0 #86efac;}
+.gb-d{background:#a16207;box-shadow:inset -4px -5px 0 #78350f,inset 4px 5px 0 #d97706;}
+.gb-s{background:#64748b;box-shadow:inset -4px -5px 0 #334155,inset 4px 5px 0 #94a3b8;}
+.gb-w{background:#854d0e;box-shadow:inset -4px -5px 0 #431407,inset 4px 5px 0 #b45309;}
+.gb-y{background:#eab308;box-shadow:inset -4px -5px 0 #a16207,inset 4px 5px 0 #fde047;}
+.gb-b{background:#0ea5e9;box-shadow:inset -4px -5px 0 #0369a1,inset 4px 5px 0 #7dd3fc;}
+
+/* stagger block bounce */
+.gb:nth-child(1){animation-duration:2.1s;animation-delay:0s;}
+.gb:nth-child(2){animation-duration:2.3s;animation-delay:0.15s;}
+.gb:nth-child(3){animation-duration:1.9s;animation-delay:0.3s;}
+.gb:nth-child(4){animation-duration:2.4s;animation-delay:0.1s;}
+.gb:nth-child(5){animation-duration:2.0s;animation-delay:0.25s;}
+.gb:nth-child(6){animation-duration:2.2s;animation-delay:0.05s;}
+.gb:nth-child(7){animation-duration:1.8s;animation-delay:0.35s;}
+.gb:nth-child(8){animation-duration:2.5s;animation-delay:0.2s;}
+.gb:nth-child(9){animation-duration:2.1s;animation-delay:0.4s;}
+.gb:nth-child(10){animation-duration:2.3s;animation-delay:0.12s;}
+.gb:nth-child(11){animation-duration:1.9s;animation-delay:0.28s;}
+.gb:nth-child(12){animation-duration:2.0s;animation-delay:0.18s;}
+
+/* ── CONTACTO ── */
+#contacto{
+  background:#fff;
+  padding:5rem 1.5rem;
+  text-align:center;
+  border-top:3px solid var(--green-pale);
+  position:relative;
+  overflow:hidden;
+}
+#contacto::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--green-l),var(--yellow),var(--blue),var(--orange),var(--purple),var(--green-l));
+  background-size:200% 100%;
+  animation:rainbow 3s linear infinite;
+}
+@keyframes rainbow{0%{background-position:0% 0%;}100%{background-position:200% 0%;}}
+
+.section-eyebrow{
+  font-family:var(--pixel);font-size:0.42rem;
+  color:var(--green);letter-spacing:0.12em;
+  margin-bottom:0.8rem;
+}
+.section-h2{
+  font-family:var(--sans);font-size:clamp(1.6rem,4vw,2.4rem);
+  font-weight:700;color:var(--text);
+  margin-bottom:0.6rem;line-height:1.2;
+}
+.section-desc{
+  color:var(--muted);font-size:1rem;
+  max-width:400px;margin:0 auto 2.5rem;line-height:1.7;
+}
+
+.contact-cards{
+  display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+}
+.c-card{
+  display:flex;flex-direction:column;align-items:center;gap:0.6rem;
+  background:var(--bg);border:2px solid var(--green-pale);
+  border-radius:12px;padding:1.4rem 1.8rem;
+  text-decoration:none;color:var(--text);
+  transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;
+  min-width:140px;
+}
+.c-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--green-l);
+  box-shadow:0 8px 24px rgba(74,222,128,0.2);
+}
+.c-card .c-icon{
+  font-size:1.8rem;
+  animation:iconBob 2.5s ease-in-out infinite;
+}
+@keyframes iconBob{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-4px);}
+}
+.c-card:nth-child(2) .c-icon{animation-delay:0.4s;}
+.c-card:nth-child(3) .c-icon{animation-delay:0.8s;}
+.c-card .c-label{
+  font-family:var(--pixel);font-size:0.42rem;
+  color:var(--green);letter-spacing:0.06em;
+}
+.c-card .c-sub{font-size:0.8rem;color:var(--muted);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--text);color:#94a3b8;
+  text-align:center;padding:1.8rem 1.5rem;
+  font-size:0.82rem;line-height:1.8;
+}
+footer .f-logo{
+  font-family:var(--pixel);font-size:0.5rem;
+  color:var(--green-l);margin-bottom:0.4rem;
+  display:block;
+}
+footer .f-sprint{
+  display:inline-block;
+  font-family:var(--pixel);font-size:0.38rem;
+  color:var(--green);background:rgba(74,222,128,0.1);
+  border:1px solid rgba(74,222,128,0.2);
+  padding:0.2rem 0.5rem;border-radius:3px;
+  margin-top:0.4rem;
+}
+
+/* ── SHARED ANIMS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .hero-btns{flex-direction:column;align-items:center;}
+  .btn-green,.btn-outline{width:100%;text-align:center;}
+  nav{padding:0.7rem 1rem;}
+  .gb{width:30px;height:30px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="pick">⛏</span> MakerCraft
+  </div>
+  <a class="nav-btn" href="#contacto">▶ CONTACTO</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero" id="inicio">
+
+  <!-- confetti blocks (JS spawned) -->
+
+  <div class="hero-badge">⚡ EDUCAÇÃO MAKER · STEAM · EMPREENDEDORISMO</div>
+
+  <div class="hero-title">
+    <span class="maker">Maker</span><span class="craft">Craft</span>
+  </div>
+
+  <p class="hero-sub-line">// O teu mundo. As tuas ferramentas. A tua criação.</p>
+
+  <p class="hero-desc">
+    Capacitação prática de jovens e comunidades através de tecnologia, criação, prototipagem e resolução de problemas reais.
+  </p>
+
+  <!-- XP BAR -->
+  <div class="xp-bar-wrap">
+    <div class="xp-label">
+      <span>▸ O TEU POTENCIAL</span>
+      <span id="xp-pct">0%</span>
+    </div>
+    <div class="xp-track">
+      <div class="xp-fill" id="xp-fill"></div>
+    </div>
+  </div>
+
+  <div class="hero-btns">
+    <a class="btn-green" href="#contacto">⛏ FALAR SOBRE UM PROJETO</a>
+    <a class="btn-outline" href="#contacto">▶ VER PROJETOS</a>
+  </div>
+
+  <!-- BLOCK GROUND -->
+  <div class="block-ground">
+    <div class="gb gb-g"></div>
+    <div class="gb gb-g"></div>
+    <div class="gb gb-d"></div>
+    <div class="gb gb-g"></div>
+    <div class="gb gb-y"></div>
+    <div class="gb gb-g"></div>
+    <div class="gb gb-b"></div>
+    <div class="gb gb-g"></div>
+    <div class="gb gb-s"></div>
+    <div class="gb gb-g"></div>
+    <div class="gb gb-w"></div>
+    <div class="gb gb-g"></div>
+  </div>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <p class="section-eyebrow">// VAMOS CONSTRUIR JUNTOS</p>
+  <h2 class="section-h2">Vamos conversar?</h2>
+  <p class="section-desc">Interessado em workshops, projetos educativos, iniciativas STEAM ou colaboração?</p>
+
+  <div class="contact-cards">
+    <a class="c-card" href="mailto:makercraft.pt@gmail.com">
+      <span class="c-icon">✉️</span>
+      <span class="c-label">EMAIL</span>
+      <span class="c-sub">makercraft.pt@gmail.com</span>
+    </a>
+    <a class="c-card" href="https://github.com/makercraftpt" target="_blank" rel="noopener">
+      <span class="c-icon">🐙</span>
+      <span class="c-label">GITHUB</span>
+      <span class="c-sub">github.com/makercraftpt</span>
+    </a>
+    <a class="c-card" href="https://makercraft.pt" target="_blank" rel="noopener">
+      <span class="c-icon">🌐</span>
+      <span class="c-label">WEBSITE</span>
+      <span class="c-sub">makercraft.pt</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-logo">⛏ MakerCraft</span>
+  Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
+  <br><span class="f-sprint">▸ SPRINT 1 / 5</span>
+</footer>
+
+<script>
+// XP bar fill on load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const fill = document.getElementById('xp-fill');
+    const pct  = document.getElementById('xp-pct');
+    fill.style.width = '72%';
+    let n = 0;
+    const iv = setInterval(() => {
+      n++;
+      pct.textContent = n + '%';
+      if (n >= 72) clearInterval(iv);
+    }, 25);
+  }, 600);
+});
+
+// Confetti pixel blocks
+const colors = ['#4ade80','#fbbf24','#38bdf8','#fb923c','#a78bfa','#f472b6','#22c55e'];
+const hero = document.getElementById('hero');
+for (let i = 0; i < 18; i++) {
+  const b = document.createElement('div');
+  b.className = 'confetti-block';
+  b.style.cssText = `
+    left:${Math.random()*100}%;
+    top:${Math.random()*60}%;
+    background:${colors[Math.floor(Math.random()*colors.length)]};
+    animation-duration:${4+Math.random()*6}s;
+    animation-delay:${Math.random()*5}s;
+    width:${12+Math.random()*14}px;
+    height:${12+Math.random()*14}px;
+    opacity:0;
+  `;
+  hero.appendChild(b);
+}
+</script>
+</body>
+</html>
