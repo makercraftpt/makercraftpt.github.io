@@ -4,6 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MakerCraft — Educação Maker, STEAM e Empreendedorismo</title>
+<meta name="description" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo com impacto real. Workshops de Arduino, IoT, impressão 3D, Python e fabricação digital para jovens e comunidades. Belmiro Luís, Portugal.">
+<meta name="keywords" content="educação maker, STEAM, workshops Arduino, impressão 3D, IoT, Python, empreendedorismo jovem, FabLab, Portugal, Lousã, Coimbra">
+<meta name="author" content="Belmiro Luís">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://makercraft.pt">
+
+<!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://makercraft.pt">
+<meta property="og:title" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo">
+<meta property="og:description" content="Capacitação prática de jovens e comunidades através de tecnologia, criação, prototipagem e resolução de problemas reais.">
+<meta property="og:image" content="https://makercraft.pt/foto-belmiro.jpg">
+<meta property="og:locale" content="pt_PT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo">
+<meta name="twitter:description" content="Capacitação prática de jovens e comunidades através de tecnologia, criação e prototipagem.">
+<meta name="twitter:image" content="https://makercraft.pt/foto-belmiro.jpg">
+
+<!-- Favicon emoji -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛏</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -823,11 +846,71 @@ footer .f-sprint{
     .sobre-chips { justify-content: center; }
   }
 
+
+  /* ── SPRINT 5 — SCROLL REVEAL GLOBAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* ── PROGRESS BAR NO TOPO ── */
+  #read-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--green);
+    width: 0%;
+    z-index: 999;
+    transition: width 0.1s linear;
+  }
+
+  /* ── BACK TO TOP ── */
+  #back-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 44px; height: 44px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #15803d;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 500;
+    text-decoration: none;
+  }
+  #back-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #back-top:hover { background: #15803d; }
+
+  /* ── SMOOTH ACTIVE NAV ── */
+  nav a.nav-active {
+    color: var(--text) !important;
+    font-weight: 500;
+  }
+
 </style>
 </head>
 <body>
 
 <!-- NAV -->
+<div id="read-progress"></div>
+<a href="#inicio" id="back-top" aria-label="Voltar ao topo">▲</a>
 <nav>
   <div class="nav-logo">
     <span class="pick">⛏</span> MakerCraft
@@ -888,7 +971,7 @@ footer .f-sprint{
 
 
 <!-- SPRINT 2: O PROBLEMA -->
-<section class="s2-section s2-problema" id="problema">
+<section class="s2-section s2-problema reveal" id="problema">
   <p class="s2-eyebrow">// SECÇÃO 2</p>
   <h2 class="s2-h2">Porque é que isto importa?</h2>
   <p class="s2-desc">Há um problema real nas salas de aula, nas escolas e nas comunidades.</p>
@@ -910,7 +993,7 @@ footer .f-sprint{
 </section>
 
 <!-- SPRINT 2: A SOLUÇÃO -->
-<section class="s2-section s2-solucao" id="solucao">
+<section class="s2-section s2-solucao reveal" id="solucao">
   <p class="s2-eyebrow">// SECÇÃO 3</p>
   <h2 class="s2-h2">O que é o MakerCraft?</h2>
   <p class="s2-desc">O MakerCraft junta educação prática, tecnologia e empreendedorismo para criar experiências de aprendizagem mais motivadoras, úteis e próximas do mundo real.</p>
@@ -964,7 +1047,7 @@ footer .f-sprint{
 
 
 <!-- SPRINT 3: PROJETOS -->
-<section class="s3-section" id="projetos">
+<section class="s3-section reveal" id="projetos">
   <p class="s2-eyebrow">// SECÇÃO 4</p>
   <h2 class="s2-h2">Projetos e Atividades</h2>
   <p class="s2-desc">Cada projeto é uma aventura real — com ferramentas, desafios e resultados que podes ver, tocar e mostrar.</p>
@@ -1061,7 +1144,7 @@ footer .f-sprint{
 
 
 <!-- SPRINT 4: SOBRE -->
-<section class="s4-sobre" id="sobre">
+<section class="s4-sobre reveal" id="sobre">
   <div class="sobre-inner">
 
     <div class="sobre-foto-wrap">
@@ -1096,7 +1179,7 @@ footer .f-sprint{
 </section>
 
 <!-- SPRINT 4: IMPACTO -->
-<section class="s4-impacto" id="impacto">
+<section class="s4-impacto reveal" id="impacto">
   <p class="impacto-eyebrow">// SECÇÃO 5 — O OBJETIVO</p>
   <h2 class="impacto-h2">Transformar ideias<br>em projetos reais.</h2>
   <p class="impacto-desc">Criar oportunidades reais através da educação prática, da tecnologia e da capacidade de transformar ideias em projetos concretos — para jovens, escolas e comunidades.</p>
@@ -1105,7 +1188,7 @@ footer .f-sprint{
 
 
 <!-- CONTACTO -->
-<section id="contacto">
+<section id="contacto" class="reveal">
   <p class="section-eyebrow">// VAMOS CONSTRUIR JUNTOS</p>
   <h2 class="section-h2">Vamos conversar?</h2>
   <p class="section-desc">Interessado em workshops, projetos educativos, iniciativas STEAM ou colaboração?</p>
@@ -1133,7 +1216,7 @@ footer .f-sprint{
 <footer>
   <span class="f-logo">⛏ MakerCraft</span>
   Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
-  <br><span class="f-sprint">▸ SPRINT 4 / 5</span>
+  <br><span class="f-sprint">▸ SPRINT 5 / 5 — COMPLETO ✓</span>
 </footer>
 
 <script>
@@ -1182,6 +1265,44 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 cards.forEach(c => observer.observe(c));
+
+
+// ── Progress bar de leitura ──
+const progress = document.getElementById('read-progress');
+const backTop  = document.getElementById('back-top');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total    = document.body.scrollHeight - window.innerHeight;
+  progress.style.width = Math.min((scrolled / total) * 100, 100) + '%';
+  if (scrolled > 400) backTop.classList.add('visible');
+  else backTop.classList.remove('visible');
+});
+
+// ── Scroll reveal global ──
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('revealed');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(r => revealObserver.observe(r));
+
+// ── Active nav highlight ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+const activeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('nav-active'));
+      const active = document.querySelector('nav a[href="#' + e.target.id + '"]');
+      if (active) active.classList.add('nav-active');
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => activeObserver.observe(s));
 
 </script>
 </body>
