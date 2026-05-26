@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MakerCraft — Educação Maker, STEAM e Empreendedorismo</title>
-<meta name="description" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo com impacto real. Workshops de Arduino, IoT, impressão 3D, Python e fabricação digital para jovens e comunidades. Belmiro Luís, Portugal.">
-<meta name="keywords" content="educação maker, STEAM, workshops Arduino, impressão 3D, IoT, Python, empreendedorismo jovem, FabLab, Portugal, Lousã, Coimbra">
+<meta name="description" content="MakerCraft — Workshops e programas de educação maker, STEAM e empreendedorismo para escolas, municípios e organizações. Tecnologia, criatividade e projetos reais com jovens. Belmiro Luís, Portugal.">
+<meta name="keywords" content="educação maker, STEAM, workshops escolas, programas municípios, Arduino, impressão 3D, Python, IA jovens, empreendedorismo, FabLab, Portugal, inovação social">
 <meta name="author" content="Belmiro Luís">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://makercraft.pt">
@@ -14,14 +14,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://makercraft.pt">
 <meta property="og:title" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo">
-<meta property="og:description" content="Capacitação prática de jovens e comunidades através de tecnologia, criação, prototipagem e resolução de problemas reais.">
+<meta property="og:description" content="Workshops e programas de educação maker, STEAM e empreendedorismo para escolas, municípios e organizações. Tecnologia e projetos reais com jovens.">
 <meta property="og:image" content="https://makercraft.pt/foto-belmiro.jpg">
 <meta property="og:locale" content="pt_PT">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo">
-<meta name="twitter:description" content="Capacitação prática de jovens e comunidades através de tecnologia, criação e prototipagem.">
+<meta name="twitter:description" content="Workshops e programas maker para escolas, municípios e organizações. Tecnologia e projetos reais com jovens.">
 <meta name="twitter:image" content="https://makercraft.pt/foto-belmiro.jpg">
 
 <!-- Favicon emoji -->
@@ -902,7 +902,11 @@ footer .f-sprint{
   <div class="nav-logo">
     <span class="pick">⛏</span> MakerCraft
   </div>
-  <div style="display:flex;gap:0.6rem;align-items:center;"><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#sobre">SOBRE</a><a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#projetos">PROJETOS</a><a class="nav-btn" href="#contacto">▶ CONTACTO</a></div>
+  <div style="display:flex;gap:0.6rem;align-items:center;">
+    <a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#programas">PROGRAMAS</a>
+    <a style="font-family:var(--pixel);font-size:0.42rem;color:var(--green);text-decoration:none;padding:0.4rem 0.6rem;" href="#sobre">SOBRE</a>
+    <a class="nav-btn" href="#contacto">CONTACTO</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -916,56 +920,37 @@ footer .f-sprint{
     <span class="maker">Maker</span><span class="craft">Craft</span>
   </div>
 
-  <p class="hero-sub-line">// O teu mundo. As tuas ferramentas. A tua criação.</p>
+  <p class="hero-sub-line" style="font-family:var(--sans);font-size:1.1rem;font-weight:500;color:var(--muted);letter-spacing:0.01em;">Tecnologia, criatividade e empreendedorismo em projetos reais.</p>
 
   <p class="hero-desc">
-    Capacitação prática de jovens e comunidades através de tecnologia, criação, prototipagem e resolução de problemas reais.
+    Criamos workshops e programas maker para escolas, municípios e organizações que querem transformar ideias em projetos reais.
   </p>
 
-  <!-- XP BAR -->
-  <div class="xp-bar-wrap">
-    <div class="xp-label">
-      <span>▸ O TEU POTENCIAL</span>
-      <span id="xp-pct">0%</span>
-    </div>
-    <div class="xp-track">
-      <div class="xp-fill" id="xp-fill"></div>
-    </div>
+  <!-- PARA QUEM -->
+  <div class="xp-bar-wrap" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;width:auto;">
+    <span style="font-family:var(--pixel);font-size:0.38rem;background:var(--green-pale);color:var(--green);border:1.5px solid #bbf7d0;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Escolas</span>
+    <span style="font-family:var(--pixel);font-size:0.38rem;background:#dbeafe;color:#1d4ed8;border:1.5px solid #93c5fd;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Municípios</span>
+    <span style="font-family:var(--pixel);font-size:0.38rem;background:#fef9c3;color:#a16207;border:1.5px solid #fde047;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">IPSS</span>
+    <span style="font-family:var(--pixel);font-size:0.38rem;background:#ede9fe;color:#6d28d9;border:1.5px solid #c4b5fd;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Empresas de Formação</span>
   </div>
 
   <div class="hero-btns">
-    <a class="btn-green" href="#contacto">⛏ FALAR SOBRE UM PROJETO</a>
-    <a class="btn-outline" href="#projetos">▶ VER PROJETOS</a>
-  </div>
-
-  <!-- BLOCK GROUND -->
-  <div class="block-ground">
-    <div class="gb gb-g"></div>
-    <div class="gb gb-g"></div>
-    <div class="gb gb-d"></div>
-    <div class="gb gb-g"></div>
-    <div class="gb gb-y"></div>
-    <div class="gb gb-g"></div>
-    <div class="gb gb-b"></div>
-    <div class="gb gb-g"></div>
-    <div class="gb gb-s"></div>
-    <div class="gb gb-g"></div>
-    <div class="gb gb-w"></div>
-    <div class="gb gb-g"></div>
+    <a class="btn-green" href="#contacto">FALAR SOBRE UM PROJETO</a>
+    <a class="btn-outline" href="#programas">VER PROGRAMAS</a>
   </div>
 
 </section>
 
 
-<!-- SPRINT 2: O PROBLEMA -->
+<!-- O PROBLEMA -->
 <section class="s2-section s2-problema reveal" id="problema">
-  <p class="s2-eyebrow">// SECÇÃO 2</p>
+  <p class="s2-eyebrow">O DESAFIO</p>
   <h2 class="s2-h2">Porque é que isto importa?</h2>
-  <p class="s2-desc">Há um problema real nas salas de aula, nas escolas e nas comunidades.</p>
+  <p class="s2-desc">Há um problema real nas escolas e comunidades que precisa de resposta.</p>
 
   <div class="problema-quote">
-    <p>Muitos jovens passam anos a aprender teoria sem nunca criarem projetos reais, resolverem problemas concretos ou desenvolverem autonomia, criatividade e iniciativa.</p>
-    <p>Ao mesmo tempo, escolas, municípios e comunidades procuram novas formas de envolver jovens, desenvolver competências e criar oportunidades.</p>
+    <p>Muitos jovens passam anos a aprender conteúdos teóricos sem criar projetos reais, experimentar ferramentas ou desenvolver autonomia e capacidade de resolução de problemas.</p>
+    <p>Ao mesmo tempo, escolas, municípios e organizações precisam de novas formas de envolver jovens, desenvolver competências digitais e criar oportunidades — especialmente em territórios fora dos grandes centros.</p>
   </div>
 
   <div class="pixel-divider" style="margin-top:2.5rem;">
@@ -979,11 +964,11 @@ footer .f-sprint{
   </div>
 </section>
 
-<!-- SPRINT 2: A SOLUÇÃO -->
+<!-- A SOLUÇÃO -->
 <section class="s2-section s2-solucao reveal" id="solucao">
-  <p class="s2-eyebrow">// SECÇÃO 3</p>
+  <p class="s2-eyebrow">A RESPOSTA</p>
   <h2 class="s2-h2">O que é o MakerCraft?</h2>
-  <p class="s2-desc">O MakerCraft junta educação prática, tecnologia e empreendedorismo para criar experiências de aprendizagem mais motivadoras, úteis e próximas do mundo real.</p>
+  <p class="s2-desc">O MakerCraft cria experiências práticas de aprendizagem onde jovens usam eletrónica, programação, IA e impressão 3D para transformar ideias em projetos reais.</p>
 
   <div class="solucao-cards">
 
@@ -1024,96 +1009,54 @@ footer .f-sprint{
 
 
 
-<!-- SPRINT 3: PROJETOS -->
-<section class="s3-section reveal" id="projetos">
-  <p class="s2-eyebrow">// SECÇÃO 4</p>
-  <h2 class="s2-h2">Projetos e Atividades</h2>
-  <p class="s2-desc">Cada projeto é uma aventura real — com ferramentas, desafios e resultados que podes ver, tocar e mostrar.</p>
+<!-- PROGRAMAS -->
+<section class="s3-section reveal" id="programas">
+  <p class="s2-eyebrow">O QUE OFERECEMOS</p>
+  <h2 class="s2-h2">Programas e Workshops</h2>
+  <p class="s2-desc">Workshops, programas e consultoria desenhados para escolas, municípios e organizações que querem criar impacto real com jovens.</p>
 
   <div class="s3-grid">
 
     <div class="proj-card" data-card>
       <span class="proj-emoji">⚡</span>
-      <span class="proj-num">// 01</span>
-      <p class="proj-title">Workshops Arduino & IoT</p>
-      <p class="proj-desc">Projetos práticos de sensores, automação e programação. Constrói o teu primeiro dispositivo conectado.</p>
-      <span class="proj-level">
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        &nbsp;NÍVEL INTERMÉDIO
-      </span>
+      <p class="proj-title">Arduino & IoT</p>
+      <p class="proj-desc">Criar um protótipo funcional com sensores, automação e programação. Workshop intensivo com resultado concreto ao fim do dia.</p>
+      <span class="proj-level" style="font-family:var(--pixel);font-size:0.33rem;color:var(--green);letter-spacing:0.06em;margin-top:1rem;display:block;">Workshop · 6h</span>
     </div>
 
     <div class="proj-card" data-card>
       <span class="proj-emoji">🖨️</span>
-      <span class="proj-num">// 02</span>
-      <p class="proj-title">Impressão 3D & Fabricação Digital</p>
-      <p class="proj-desc">Criação de peças, protótipos e objetos personalizados. Da ideia ao objeto físico em horas.</p>
-      <span class="proj-level">
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        &nbsp;NÍVEL BÁSICO
-      </span>
+      <p class="proj-title">Impressão 3D — Da Ideia ao Objeto</p>
+      <p class="proj-desc">Da modelação ao objeto físico. Os participantes saem com um protótipo criado por eles, pronto a mostrar.</p>
+      <span class="proj-level" style="font-family:var(--pixel);font-size:0.33rem;color:var(--green);letter-spacing:0.06em;margin-top:1rem;display:block;">Workshop · Todos os níveis</span>
     </div>
 
     <div class="proj-card" data-card>
       <span class="proj-emoji">🐍</span>
-      <span class="proj-num">// 03</span>
-      <p class="proj-title">MakerCraft Python</p>
-      <p class="proj-desc">Aprendizagem de programação através da criação de jogos e projetos visuais. Código que dá prazer fazer.</p>
-      <span class="proj-level">
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        &nbsp;NÍVEL INICIANTE
-      </span>
+      <p class="proj-title">Python Criativo</p>
+      <p class="proj-desc">Programação prática através da criação de jogos e projetos visuais. Aprender a programar fazendo algo que funciona.</p>
+      <span class="proj-level" style="font-family:var(--pixel);font-size:0.33rem;color:var(--green);letter-spacing:0.06em;margin-top:1rem;display:block;">Workshop · Iniciantes</span>
     </div>
 
     <div class="proj-card" data-card>
-      <span class="proj-emoji">🔌</span>
-      <span class="proj-num">// 04</span>
-      <p class="proj-title">Formação Técnica</p>
-      <p class="proj-desc">Eletrónica, sistemas embebidos, CAD, FreeRTOS e tecnologias digitais para quem quer ir mais fundo.</p>
-      <span class="proj-level">
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-green"></span>
-        &nbsp;NÍVEL AVANÇADO
-      </span>
+      <span class="proj-emoji">🤖</span>
+      <p class="proj-title">IA para Jovens Criadores</p>
+      <p class="proj-desc">Usar inteligência artificial para criar, não apenas consumir. Projetos práticos com ferramentas de IA acessíveis e reais.</p>
+      <span class="proj-level" style="font-family:var(--pixel);font-size:0.33rem;color:var(--green);letter-spacing:0.06em;margin-top:1rem;display:block;">Workshop · Novo</span>
     </div>
 
     <div class="proj-card" data-card>
       <span class="proj-emoji">🏫</span>
-      <span class="proj-num">// 05</span>
-      <p class="proj-title">Educação Maker</p>
-      <p class="proj-desc">Atividades STEAM para escolas, jovens e comunidades. Aprender fazendo, sempre com propósito.</p>
-      <span class="proj-level">
-        <span class="proj-level-dot lvl-green"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        &nbsp;TODOS OS NÍVEIS
-      </span>
+      <p class="proj-title">Programa STEAM para Escolas</p>
+      <p class="proj-desc">Programa estruturado de atividades maker para escolas. Tecnologia, criatividade e empreendedorismo integrados no calendário escolar.</p>
+      <span class="proj-level" style="font-family:var(--pixel);font-size:0.33rem;color:var(--blue);letter-spacing:0.06em;margin-top:1rem;display:block;">Programa · Plurianual</span>
     </div>
 
     <div class="proj-card" data-card>
       <span class="proj-emoji">🌱</span>
-      <span class="proj-num">// 06</span>
-      <p class="proj-title">Inovação Social & NEET</p>
-      <p class="proj-desc">Projetos de capacitação e inclusão através da aprendizagem prática. Tecnologia ao serviço de quem mais precisa.</p>
-      <span class="proj-level">
-        <span class="proj-level-dot lvl-yellow"></span>
-        <span class="proj-level-dot lvl-yellow"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        <span class="proj-level-dot lvl-empty"></span>
-        &nbsp;NÍVEL BÁSICO
-      </span>
+      <p class="proj-title">Programa Jovens Criadores</p>
+      <p class="proj-desc">Capacitação tecnológica e empreendedora para jovens NEET e em risco. Tecnologia como ferramenta de autonomia e empregabilidade.</p>
+      <span class="proj-level" style="font-family:var(--pixel);font-size:0.33rem;color:var(--blue);letter-spacing:0.06em;margin-top:1rem;display:block;">Programa · Municípios & IPSS</span>
     </div>
 
   </div>
@@ -1135,11 +1078,11 @@ footer .f-sprint{
     </div>
 
     <div class="sobre-texto">
-      <p class="s2-eyebrow">// SECÇÃO 6 — SOBRE</p>
+      <p class="s2-eyebrow">SOBRE</p>
       <h2>Belmiro Luís</h2>
-      <span class="sobre-cargo">// PROFESSOR · MAKER · FACILITADOR</span>
-      <p>Belmiro Luís é professor, maker e facilitador de projetos educativos e tecnológicos ligados à eletrónica, programação, fabricação digital e empreendedorismo.</p>
-      <p>Tem experiência em ensino técnico, projetos europeus, formação prática e desenvolvimento de iniciativas maker com escolas, jovens e comunidades.</p>
+      <span class="sobre-cargo">Professor · Maker · Facilitador</span>
+      <p>Belmiro Luís é professor, maker e facilitador de projetos educativos e tecnológicos. Trabalha na ligação entre eletrónica, programação, fabricação digital, IA, empreendedorismo e aprendizagem prática.</p>
+      <p>Tem experiência em ensino técnico, projetos europeus e desenvolvimento de iniciativas maker com escolas, jovens e comunidades — incluindo territórios de baixa densidade e projetos de inovação social.</p>
       <div class="sobre-chips">
         <span class="chip chip-g">Arduino & IoT</span>
         <span class="chip chip-g">Impressão 3D</span>
@@ -1157,18 +1100,18 @@ footer .f-sprint{
 
 <!-- SPRINT 4: IMPACTO -->
 <section class="s4-impacto reveal" id="impacto">
-  <p class="impacto-eyebrow">// SECÇÃO 5 — O OBJETIVO</p>
-  <h2 class="impacto-h2">Transformar ideias<br>em projetos reais.</h2>
-  <p class="impacto-desc">Criar oportunidades reais através da educação prática, da tecnologia e da capacidade de transformar ideias em projetos concretos — para jovens, escolas e comunidades.</p>
-  <a class="impacto-cta" href="#contacto">⛏ VAMOS CONSTRUIR JUNTOS</a>
+  <p class="impacto-eyebrow">O RESULTADO</p>
+  <h2 class="impacto-h2">Jovens que criam.<br>Instituições que impactam.</h2>
+  <p class="impacto-desc">Os jovens ganham autonomia, competências digitais e confiança para criar. As escolas e municípios ganham atividades com impacto visível, projetos concretos e envolvimento jovem real.</p>
+  <a class="impacto-cta" href="#contacto">VAMOS CONVERSAR</a>
 </section>
 
 
 <!-- CONTACTO -->
 <section id="contacto" class="reveal">
-  <p class="section-eyebrow">// VAMOS CONSTRUIR JUNTOS</p>
+  <p class="section-eyebrow">CONTACTO</p>
   <h2 class="section-h2">Vamos conversar?</h2>
-  <p class="section-desc">Interessado em workshops, projetos educativos, iniciativas STEAM ou colaboração?</p>
+  <p class="section-desc">Quer criar um workshop, programa ou projeto MakerCraft na sua escola, município ou organização? Entre em contacto.</p>
 
   <div class="contact-cards">
     <a class="c-card" href="mailto:makercraft.pt@gmail.com">
@@ -1176,15 +1119,15 @@ footer .f-sprint{
       <span class="c-label">EMAIL</span>
       <span class="c-sub">makercraft.pt@gmail.com</span>
     </a>
-    <a class="c-card" href="https://github.com/makercraftpt" target="_blank" rel="noopener">
-      <span class="c-icon">🐙</span>
-      <span class="c-label">GITHUB</span>
-      <span class="c-sub">github.com/makercraftpt</span>
+    <a class="c-card" href="https://linkedin.com/in/miroluis" target="_blank" rel="noopener">
+      <span class="c-icon">💼</span>
+      <span class="c-label">LINKEDIN</span>
+      <span class="c-sub">linkedin.com/in/miroluis</span>
     </a>
-    <a class="c-card" href="https://makercraft.pt" target="_blank" rel="noopener">
-      <span class="c-icon">🌐</span>
-      <span class="c-label">WEBSITE</span>
-      <span class="c-sub">makercraft.pt</span>
+    <a class="c-card" href="tel:+351916166847">
+      <span class="c-icon">📞</span>
+      <span class="c-label">TELEFONE</span>
+      <span class="c-sub">916 166 847</span>
     </a>
   </div>
 </section>
@@ -1193,43 +1136,10 @@ footer .f-sprint{
 <footer>
   <span class="f-logo">⛏ MakerCraft</span>
   Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
-  <br><span class="f-sprint">▸ SPRINT 5 / 5 — COMPLETO ✓</span>
+  <br>makercraft.pt · makercraft.pt@gmail.com
 </footer>
 
 <script>
-// XP bar fill on load
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const fill = document.getElementById('xp-fill');
-    const pct  = document.getElementById('xp-pct');
-    fill.style.width = '72%';
-    let n = 0;
-    const iv = setInterval(() => {
-      n++;
-      pct.textContent = n + '%';
-      if (n >= 72) clearInterval(iv);
-    }, 25);
-  }, 600);
-});
-
-// Confetti pixel blocks
-const colors = ['#4ade80','#fbbf24','#38bdf8','#fb923c','#a78bfa','#f472b6','#22c55e'];
-const hero = document.getElementById('hero');
-for (let i = 0; i < 18; i++) {
-  const b = document.createElement('div');
-  b.className = 'confetti-block';
-  b.style.cssText = `
-    left:${Math.random()*100}%;
-    top:${Math.random()*60}%;
-    background:${colors[Math.floor(Math.random()*colors.length)]};
-    animation-duration:${4+Math.random()*6}s;
-    animation-delay:${Math.random()*5}s;
-    width:${12+Math.random()*14}px;
-    height:${12+Math.random()*14}px;
-    opacity:0;
-  `;
-  hero.appendChild(b);
-}
 
 // Scroll reveal for solution cards
 const cards = document.querySelectorAll('[data-card]');
