@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MakerCraft — Educação Maker, STEAM e Empreendedorismo</title>
-<meta name="description" content="MakerCraft — Workshops e programas de educação maker, STEAM e empreendedorismo para escolas, municípios e organizações. Tecnologia, criatividade e projetos reais com jovens. Belmiro Luís, Portugal.">
+<meta name="description" content="Sou o Belmiro Luís — ajudo escolas, municípios e organizações a resolver desafios reais através de tecnologia, IA, STEAM e cultura maker. Portugal.">
 <meta name="keywords" content="educação maker, STEAM, workshops escolas, programas municípios, Arduino, impressão 3D, Python, IA jovens, empreendedorismo, FabLab, Portugal, inovação social">
 <meta name="author" content="Belmiro Luís">
 <meta name="robots" content="index, follow">
@@ -14,14 +14,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://makercraft.pt">
 <meta property="og:title" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo">
-<meta property="og:description" content="Workshops e programas de educação maker, STEAM e empreendedorismo para escolas, municípios e organizações. Tecnologia e projetos reais com jovens.">
+<meta property="og:description" content="Ajudo escolas, municípios e organizações a resolver desafios reais através de tecnologia, IA, STEAM e cultura maker. Belmiro Luís, Portugal.">
 <meta property="og:image" content="https://makercraft.pt/foto-belmiro.jpg">
 <meta property="og:locale" content="pt_PT">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MakerCraft — Educação Maker, STEAM e Empreendedorismo">
-<meta name="twitter:description" content="Workshops e programas maker para escolas, municípios e organizações. Tecnologia e projetos reais com jovens.">
+<meta name="twitter:description" content="Ajudo escolas, municípios e organizações a resolver desafios reais através de tecnologia, IA, STEAM e cultura maker.">
 <meta name="twitter:image" content="https://makercraft.pt/foto-belmiro.jpg">
 
 <!-- Favicon emoji -->
@@ -86,7 +86,7 @@ nav{
 .nav-btn:active{transform:translateY(4px);box-shadow:none;}
 
 /* ── HERO ── */
-#hero{
+.hero{
   position:relative;
   min-height:100vh;
   display:flex;flex-direction:column;
@@ -97,7 +97,7 @@ nav{
 }
 
 /* animated radial glow */
-#hero::before{
+.hero::before{
   content:'';
   position:absolute;
   top:-10%;left:50%;
@@ -891,6 +891,95 @@ footer .f-sprint{
     font-weight: 500;
   }
 
+  /* ── SPRINT 3 — TRABALHO COM ── */
+  .s5-trabalho {
+    padding: 5rem 1.5rem;
+    background: #fff;
+    position: relative;
+  }
+
+  .trabalho-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+  }
+
+  .trabalho-card {
+    background: var(--bg);
+    border: 2px solid var(--green-pale);
+    border-radius: 16px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .trabalho-card.visible {
+    animation: cardReveal 0.5s ease forwards;
+  }
+  .trabalho-card:nth-child(2) { animation-delay: 0.12s; }
+  .trabalho-card:nth-child(3) { animation-delay: 0.24s; }
+  .trabalho-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--green-l);
+    box-shadow: 0 12px 32px rgba(74,222,128,0.15);
+  }
+
+  .trabalho-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .trabalho-emoji {
+    font-size: 1.8rem;
+  }
+  .trabalho-header h3 {
+    font-family: var(--sans);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .trabalho-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+  .trabalho-lista li {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.5;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  .trabalho-lista li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-size: 0.75rem;
+    top: 0.1rem;
+  }
+
+  .trabalho-cta {
+    font-family: var(--pixel);
+    font-size: 0.6rem;
+    color: var(--green);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    margin-top: 0.5rem;
+    transition: letter-spacing 0.2s;
+  }
+  .trabalho-cta:hover {
+    letter-spacing: 0.08em;
+  }
+
 </style>
 </head>
 <body>
@@ -910,20 +999,20 @@ footer .f-sprint{
 </nav>
 
 <!-- HERO -->
-<section id="hero" id="inicio">
+<section id="inicio" class="hero">
 
   <!-- confetti blocks (JS spawned) -->
 
-  <div class="hero-badge">⚡ EDUCAÇÃO MAKER · STEAM · EMPREENDEDORISMO</div>
+  <div class="hero-badge">⚡ EDUCAÇÃO MAKER · STEAM · IA · EMPREENDEDORISMO</div>
 
   <div class="hero-title">
     <span class="maker">Maker</span><span class="craft">Craft</span>
   </div>
 
-  <p class="hero-sub-line" style="font-family:var(--sans);font-size:1.4rem;font-weight:500;color:var(--muted);letter-spacing:0.01em;">Tecnologia, criatividade e empreendedorismo em projetos reais.</p>
+  <p class="hero-sub-line" style="font-family:var(--sans);font-size:1.4rem;font-weight:500;color:var(--muted);letter-spacing:0.01em;">Sou o Belmiro Luís — professor, engenheiro e maker.</p>
 
   <p class="hero-desc">
-    Criamos workshops e programas maker para escolas, municípios e organizações que querem transformar ideias em projetos reais.
+    Ajudo escolas, municípios e organizações a resolver desafios reais através de tecnologia, IA, STEAM e cultura maker.
   </p>
 
   <!-- PARA QUEM -->
@@ -931,11 +1020,11 @@ footer .f-sprint{
     <span style="font-family:var(--pixel);font-size:1rem;background:var(--green-pale);color:var(--green);border:1.5px solid #bbf7d0;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Escolas</span>
     <span style="font-family:var(--pixel);font-size:1rem;background:#dbeafe;color:#1d4ed8;border:1.5px solid #93c5fd;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Municípios</span>
     <span style="font-family:var(--pixel);font-size:1rem;background:#fef9c3;color:#a16207;border:1.5px solid #fde047;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">IPSS</span>
-    <span style="font-family:var(--pixel);font-size:1rem;background:#ede9fe;color:#6d28d9;border:1.5px solid #c4b5fd;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Empresas de Formação</span>
+    <span style="font-family:var(--pixel);font-size:1rem;background:#ede9fe;color:#6d28d9;border:1.5px solid #c4b5fd;padding:0.4rem 0.8rem;border-radius:4px;letter-spacing:0.06em;">Entidades de Formação</span>
   </div>
 
   <div class="hero-btns">
-    <a class="btn-green" href="#contacto">FALAR SOBRE UM PROJETO</a>
+    <a class="btn-green" href="#contacto">VAMOS CONVERSAR</a>
     <a class="btn-outline" href="#programas">VER PROGRAMAS</a>
   </div>
 
@@ -945,12 +1034,12 @@ footer .f-sprint{
 <!-- O PROBLEMA -->
 <section class="s2-section s2-problema reveal" id="problema">
   <p class="s2-eyebrow">O DESAFIO</p>
-  <h2 class="s2-h2">Porque é que isto importa?</h2>
-  <p class="s2-desc">Há um problema real nas escolas e comunidades que precisa de resposta.</p>
+  <h2 class="s2-h2">Tens tecnologia. Falta a metodologia.</h2>
+  <p class="s2-desc">É o problema mais comum que encontro quando começo a trabalhar com uma escola ou município.</p>
 
   <div class="problema-quote">
-    <p>Muitos jovens passam anos a aprender conteúdos teóricos sem criar projetos reais, experimentar ferramentas ou desenvolver autonomia e capacidade de resolução de problemas.</p>
-    <p>Ao mesmo tempo, escolas, municípios e organizações precisam de novas formas de envolver jovens, desenvolver competências digitais e criar oportunidades — especialmente em territórios fora dos grandes centros.</p>
+    <p>Há computadores, tablets e até impressoras 3D a acumular pó. Há vontade de fazer algo com IA e STEAM. Mas ninguém sabe por onde começar — e os jovens continuam desligados.</p>
+    <p>Ao mesmo tempo, municípios e organizações precisam de respostas concretas para jovens NEET, territórios sem oportunidades e comunidades que ficam para trás na transição digital.</p>
   </div>
 
   <div class="pixel-divider" style="margin-top:2.5rem;">
@@ -966,16 +1055,16 @@ footer .f-sprint{
 
 <!-- A SOLUÇÃO -->
 <section class="s2-section s2-solucao reveal" id="solucao">
-  <p class="s2-eyebrow">A RESPOSTA</p>
-  <h2 class="s2-h2">O que é o MakerCraft?</h2>
-  <p class="s2-desc">O MakerCraft cria experiências práticas de aprendizagem onde jovens usam eletrónica, programação, IA e impressão 3D para transformar ideias em projetos reais.</p>
+  <p class="s2-eyebrow">COMO POSSO AJUDAR</p>
+  <h2 class="s2-h2">Transformo tecnologia em aprendizagem real.</h2>
+  <p class="s2-desc">Não vendo workshops. Ajudo a resolver desafios concretos — com metodologia, experiência e projetos que funcionam.</p>
 
   <div class="solucao-cards">
 
     <div class="sol-card" data-card>
       <div class="sol-icon sol-icon-maker">🔧</div>
       <h3>Maker &amp;<br>Prototipagem</h3>
-      <p>Arduino, eletrónica, impressão 3D, IoT, fabricação digital e criação prática.</p>
+      <p>Arduino, eletrónica, impressão 3D, IoT — jovens constroem algo real e saem com um protótipo nas mãos.</p>
       <div class="sol-tags">
         <span class="sol-tag tag-green">Arduino</span>
         <span class="sol-tag tag-green">3D Print</span>
@@ -986,22 +1075,22 @@ footer .f-sprint{
     <div class="sol-card" data-card>
       <div class="sol-icon sol-icon-steam">🔬</div>
       <h3>STEAM &amp;<br>Tecnologia</h3>
-      <p>Aprendizagem baseada em projetos nas áreas da ciência, tecnologia, engenharia e programação.</p>
+      <p>Aprendizagem baseada em projetos — ciência, tecnologia e programação com resultados visíveis e mensuráveis.</p>
       <div class="sol-tags">
         <span class="sol-tag tag-blue">Python</span>
+        <span class="sol-tag tag-blue">IA</span>
         <span class="sol-tag tag-blue">Robótica</span>
-        <span class="sol-tag tag-blue">CAD</span>
       </div>
     </div>
 
     <div class="sol-card" data-card>
       <div class="sol-icon sol-icon-empr">🚀</div>
       <h3>Empreendedorismo<br>Jovem</h3>
-      <p>Desenvolvimento de autonomia, criatividade, resolução de problemas e espírito empreendedor.</p>
+      <p>Autonomia, criatividade e resolução de problemas reais — jovens que pensam como criadores, não como consumidores.</p>
       <div class="sol-tags">
         <span class="sol-tag tag-yellow">Projetos</span>
         <span class="sol-tag tag-yellow">Ideias</span>
-        <span class="sol-tag tag-yellow">Futuro</span>
+        <span class="sol-tag tag-yellow">Impacto</span>
       </div>
     </div>
 
@@ -1009,11 +1098,69 @@ footer .f-sprint{
 
 
 
+<!-- TRABALHO COM -->
+<section class="s5-trabalho reveal" id="trabalho">
+  <p class="s2-eyebrow">TRABALHO COM</p>
+  <h2 class="s2-h2">Para quem é o MakerCraft?</h2>
+  <p class="s2-desc">Trabalho directamente com quem quer criar impacto real com jovens. Cada contexto tem os seus desafios — e as suas soluções.</p>
+
+  <div class="trabalho-grid">
+
+    <div class="trabalho-card" data-card>
+      <div class="trabalho-header">
+        <span class="trabalho-emoji">🏫</span>
+        <h3>Escolas</h3>
+      </div>
+      <ul class="trabalho-lista">
+        <li>Motivar alunos com projetos práticos e reais</li>
+        <li>Integrar IA e tecnologia no currículo</li>
+        <li>Criar ou dinamizar um clube maker</li>
+        <li>Desenvolver competências STEAM</li>
+        <li>Formação tecnológica para professores</li>
+      </ul>
+      <a class="trabalho-cta" href="#contacto">Falar sobre a tua escola →</a>
+    </div>
+
+    <div class="trabalho-card" data-card>
+      <div class="trabalho-header">
+        <span class="trabalho-emoji">🏛️</span>
+        <h3>Municípios</h3>
+      </div>
+      <ul class="trabalho-lista">
+        <li>Programas para jovens NEET e em risco</li>
+        <li>Inclusão digital em territórios rurais</li>
+        <li>Empreendedorismo jovem local</li>
+        <li>Fixar talento e criar oportunidades</li>
+        <li>Projetos de inovação social com impacto</li>
+      </ul>
+      <a class="trabalho-cta" href="#contacto">Falar sobre o teu município →</a>
+    </div>
+
+    <div class="trabalho-card" data-card>
+      <div class="trabalho-header">
+        <span class="trabalho-emoji">🤝</span>
+        <h3>IPSS & Associações</h3>
+      </div>
+      <ul class="trabalho-lista">
+        <li>Capacitação digital de jovens e comunidades</li>
+        <li>Projetos europeus Erasmus+ e outros</li>
+        <li>Formação prática com impacto comunitário</li>
+        <li>Dinamização de espaços maker</li>
+        <li>Participação e empoderamento jovem</li>
+      </ul>
+      <a class="trabalho-cta" href="#contacto">Falar sobre a tua organização →</a>
+    </div>
+
+  </div>
+</section>
+
+
+
 <!-- PROGRAMAS -->
 <section class="s3-section reveal" id="programas">
-  <p class="s2-eyebrow">O QUE OFERECEMOS</p>
+  <p class="s2-eyebrow">O QUE FAÇO</p>
   <h2 class="s2-h2">Programas e Workshops</h2>
-  <p class="s2-desc">Workshops, programas e consultoria desenhados para escolas, municípios e organizações que querem criar impacto real com jovens.</p>
+  <p class="s2-desc">Workshops e programas desenhados para escolas, municípios e organizações que querem criar impacto real com jovens.</p>
 
   <div class="s3-grid">
 
@@ -1078,20 +1225,20 @@ footer .f-sprint{
     </div>
 
     <div class="sobre-texto">
-      <p class="s2-eyebrow">SOBRE</p>
+      <p class="s2-eyebrow">QUEM SOU</p>
       <h2>Belmiro Luís</h2>
-      <span class="sobre-cargo">Professor · Maker · Facilitador</span>
-      <p>Belmiro Luís é professor, maker e facilitador de projetos educativos e tecnológicos. Trabalha na ligação entre eletrónica, programação, fabricação digital, IA, empreendedorismo e aprendizagem prática.</p>
-      <p>Tem experiência em ensino técnico, projetos europeus e desenvolvimento de iniciativas maker com escolas, jovens e comunidades — incluindo territórios de baixa densidade e projetos de inovação social.</p>
+      <span class="sobre-cargo">Engenheiro · Professor · Gestor de Fablab</span>
+      <p>Sou engenheiro eletrotécnico, professor e maker. Há mais de 10 anos que ligo tecnologia, educação e inovação para resolver problemas reais com escolas, jovens e comunidades.</p>
+      <p>Já geri um Fablab, coordenei projetos de incubação e liderei iniciativas Erasmus+. Trabalho regularmente com territórios de baixa densidade onde a tecnologia pode fazer a diferença — e onde quase ninguém chega.</p>
       <div class="sobre-chips">
-        <span class="chip chip-g">Arduino & IoT</span>
-        <span class="chip chip-g">Impressão 3D</span>
-        <span class="chip chip-b">Python</span>
-        <span class="chip chip-b">CAD</span>
+        <span class="chip chip-g">Engenheiro Eletrotécnico</span>
+        <span class="chip chip-g">Gestor de Fablab</span>
+        <span class="chip chip-b">Projetos Erasmus+</span>
+        <span class="chip chip-b">Gestor de Incubação</span>
         <span class="chip chip-y">STEAM</span>
-        <span class="chip chip-y">Workshops</span>
-        <span class="chip chip-p">Projetos Europeus</span>
-        <span class="chip chip-p">FabLab</span>
+        <span class="chip chip-y">Arduino & IoT</span>
+        <span class="chip chip-p">Impressão 3D</span>
+        <span class="chip chip-p">IA & Python</span>
       </div>
     </div>
 
@@ -1102,7 +1249,7 @@ footer .f-sprint{
 <section class="s4-impacto reveal" id="impacto">
   <p class="impacto-eyebrow">O RESULTADO</p>
   <h2 class="impacto-h2">Jovens que criam.<br>Instituições que impactam.</h2>
-  <p class="impacto-desc">Os jovens ganham autonomia, competências digitais e confiança para criar. As escolas e municípios ganham atividades com impacto visível, projetos concretos e envolvimento jovem real.</p>
+  <p class="impacto-desc">Os jovens ganham autonomia, competências digitais e confiança para criar. As escolas e municípios ganham atividades com impacto visível, projetos concretos e envolvimento jovem real. É isto que me move.</p>
   <a class="impacto-cta" href="#contacto">VAMOS CONVERSAR</a>
 </section>
 
@@ -1111,13 +1258,13 @@ footer .f-sprint{
 <section id="contacto" class="reveal">
   <p class="section-eyebrow">CONTACTO</p>
   <h2 class="section-h2">Vamos conversar?</h2>
-  <p class="section-desc">Quer criar um workshop, programa ou projeto MakerCraft na sua escola, município ou organização? Entre em contacto.</p>
+  <p class="section-desc">Tens um desafio numa escola, município ou organização? Fala comigo directamente — é assim que tudo começa.</p>
 
   <div class="contact-cards">
-    <a class="c-card" href="mailto:makercraft.pt@gmail.com">
+    <a class="c-card" href="mailto:hello@makercraft.pt">
       <span class="c-icon">✉️</span>
       <span class="c-label">EMAIL</span>
-      <span class="c-sub">makercraft.pt@gmail.com</span>
+      <span class="c-sub">hello@makercraft.pt</span>
     </a>
     <a class="c-card" href="https://linkedin.com/in/miroluis" target="_blank" rel="noopener">
       <span class="c-icon">💼</span>
@@ -1136,7 +1283,7 @@ footer .f-sprint{
 <footer>
   <span class="f-logo">⛏ MakerCraft</span>
   Educação Maker, STEAM e Empreendedorismo · Belmiro Luís · Portugal
-  <br>makercraft.pt · makercraft.pt@gmail.com
+  <br>makercraft.pt · hello@makercraft.pt
 </footer>
 
 <script>
