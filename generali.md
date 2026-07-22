@@ -5,6 +5,446 @@ date: 2026-07-16
 permalink: /generali/
 ---
 
+<details>
+<summary><strong>Preparação anterior às entrevistas</strong></summary>
+
+---
+# Histórico das entrevistas
+Esta secção regista as diferentes fases do processo de recrutamento para o projeto Generali France.
+O objetivo é distinguir:
+* o que foi preparado antes das entrevistas;
+* o que aconteceu efetivamente em cada entrevista;
+* as questões que ficaram por esclarecer;
+* os pontos que devo melhorar numa eventual entrevista seguinte.
+---
+## Entrevista 1 — Contacto inicial com a Aubay
+### Contexto
+O primeiro contacto teve como principal objetivo apresentar a oportunidade, conhecer o meu percurso e avaliar o meu interesse pelo projeto.
+### Informações principais da oportunidade
+* Projeto para a Generali France.
+* Trabalho relacionado com manutenção e evolução de aplicações internas.
+* Desenvolvimento em C.
+* Utilização de SQL e stored procedures.
+* Integração através de webservices.
+* Possível utilização de SOAP e REST.
+* Ferramentas mencionadas:
+  * Git;
+  * Jira;
+  * Jenkins;
+  * Linux.
+* Trabalho integrado numa equipa internacional.
+* Necessidade de comunicação em francês, pelo menos progressivamente.
+### Condições discutidas
+* Proposta final comunicada pela Aubay:
+  * cerca de 2.000 € líquidos por mês;
+  * 14 meses;
+  * parte do valor composta por salário, subsídio de alimentação e ajudas de custo;
+  * modelo híbrido;
+  * deslocação ao Porto aproximadamente uma vez por semana.
+### Primeira leitura pessoal
+A oportunidade pode representar:
+* maior estabilidade financeira;
+* regresso a uma atividade técnica diária;
+* integração numa equipa de desenvolvimento estruturada;
+* contacto com um projeto internacional;
+* possibilidade de recuperar e aprofundar competências em C.
+As principais dúvidas são:
+* carga real de trabalho;
+* pressão e ritmo da equipa;
+* compatibilidade com a atividade no ISEC;
+* evolução futura do salário;
+* deslocações ao Porto;
+* utilização diária do francês;
+* possibilidade de crescimento dentro do projeto.
+---
+## Entrevista 2 — Aubay France e Generali
+### Data
+22 de julho de 2026.
+### Participantes
+#### Jean-Jacques — Aubay France
+* Conduziu grande parte da conversa.
+* Falou sempre em francês.
+* Perguntou várias vezes sobre a minha motivação.
+* Pareceu estar particularmente interessado em perceber:
+  * porque quero regressar ao desenvolvimento;
+  * porque quero trabalhar neste projeto;
+  * o que me motiva profissionalmente;
+  * se a minha motivação se mantém para além do gosto pela linguagem C.
+#### António Sarmento
+* Está há aproximadamente uma semana na Aubay/Generali.
+* Colocou as principais perguntas técnicas.
+* Não aprofundou excessivamente as respostas.
+* Pareceu reagir com alguma reserva quando referi o Bubble Sort como algoritmo de exemplo.
+#### Hanim Gunes — Aubay France
+* Esteve presente.
+* Interveio pouco ou não colocou questões.
+* Poderá ter tido um papel de observação e avaliação.
+---
+## Organização das equipas
+Foi referido que existem aproximadamente doze squads.
+Cada equipa poderá ter uma composição semelhante a:
+* 5 programadores C;
+* 2 profissionais de QA;
+* 2 profissionais de BI;
+* 1 Scrum Master.
+Foi também referido que existem dois developers associados ao trabalho com webservices.
+O trabalho é realizado segundo uma metodologia Agile.
+---
+## Tecnologias e temas mencionados
+Durante a entrevista foram mencionados:
+* linguagem C;
+* C puro;
+* Linux;
+* compilação em Linux;
+* gestão de memória;
+* ponteiros;
+* algoritmos;
+* Python;
+* Java;
+* Git;
+* Jira;
+* SysBasis;
+* stored procedures;
+* webservices;
+* API SPG;
+* Agile;
+* QA;
+* BI.
+### Experiência que referi
+* Tenho experiência significativa em C.
+* Gosto particularmente de C puro.
+* Já trabalhei com compiladores e ambientes Linux.
+* Já utilizei bastante Git.
+* Já utilizei Jira, embora com menor profundidade.
+* Ainda não trabalhei com SysBasis.
+* Já trabalhei com outras ferramentas e sistemas semelhantes.
+* Nunca trabalhei profissionalmente com Java.
+* Tenho experiência em SQL Server e stored procedures.
+* Ensinei algoritmia e análise da complexidade de algoritmos.
+* Tenho experiência em sistemas embebidos, memória e ponteiros.
+---
+## Perguntas sobre motivação
+Perguntaram-me cerca de três vezes o que me motivava.
+A minha resposta foi consistente:
+> O que me motiva é resolver problemas em C. Gosto muito de C puro, de encontrar boas soluções, de realizar o trabalho, de explicar as soluções à equipa e de trabalhar em conjunto.
+A resposta foi verdadeira, mas poderá ter ficado demasiado centrada na linguagem C.
+Poderia ter ligado melhor a minha motivação ao projeto, à Generali e ao contexto de equipa.
+### Resposta melhorada
+> O que me motiva neste projeto é regressar a um trabalho técnico exigente em C, num sistema real e crítico, onde a qualidade, a fiabilidade e a correta gestão de memória são importantes.
+>
+> Gosto de compreender problemas, estruturar soluções, escrever código claro e robusto e discutir as melhores opções com a equipa.
+>
+> Também me interessa compreender melhor o negócio da Generali e trabalhar numa equipa multidisciplinar, com desenvolvimento, QA, BI e Scrum.
+>
+> Vejo este projeto como uma oportunidade para aplicar a minha experiência, atualizar conhecimentos e contribuir para uma solução de longo prazo.
+### Versão curta em francês
+> Ce qui me motive dans ce projet, c'est la possibilité de travailler à nouveau quotidiennement en C, sur des applications réelles et importantes.
+>
+> J'aime analyser les problèmes, trouver des solutions robustes et partager les décisions techniques avec l'équipe.
+>
+> Je suis également motivé pour comprendre les activités de Generali et travailler dans une équipe internationale et multidisciplinaire.
+---
+## MISRA C e boas práticas
+Durante a conversa sugeri a utilização de princípios associados a MISRA C para melhorar as boas práticas de desenvolvimento.
+Esta referência mostra preocupação com:
+* qualidade;
+* segurança;
+* previsibilidade;
+* controlo de conversões;
+* utilização correta de ponteiros;
+* redução de comportamentos indefinidos;
+* análise estática;
+* consistência de código.
+No entanto, devo evitar sugerir que todas as regras MISRA têm necessariamente de ser aplicadas a este projeto.
+Uma formulação melhor seria:
+> Conheço e valorizo vários princípios utilizados em MISRA C, nomeadamente a prevenção de comportamentos indefinidos, o controlo de conversões, a validação de ponteiros e a gestão rigorosa de memória.
+>
+> Naturalmente, as regras concretas devem ser adaptadas ao contexto e às normas já existentes na equipa.
+---
+## Pergunta sobre algoritmos
+Foi-me pedido que referisse ou explicasse um algoritmo.
+Escolhi o Bubble Sort.
+Expliquei que tinha ensinado algoritmia e as diferenças matemáticas entre vários tipos de algoritmos.
+No entanto, não expliquei imediatamente porque tinha escolhido o Bubble Sort.
+O António pareceu reagir com alguma reserva.
+### Porque escolhi o Bubble Sort
+O Bubble Sort é:
+* simples;
+* fácil de explicar;
+* fácil de implementar;
+* útil para introduzir conceitos de ordenação;
+* adequado para ensino;
+* visualmente intuitivo.
+Contudo, não é normalmente uma boa escolha para grandes volumes de dados, porque apresenta complexidade temporal de ordem quadrática:
+```text
+O(n²)
+```
+### Resposta que poderia ter dado
+> Escolhi o Bubble Sort porque é um algoritmo simples de implementar e explicar, tendo-o utilizado muitas vezes no ensino de algoritmia.
+>
+> No entanto, não o escolheria normalmente para ordenar um grande volume de dados em produção, porque a sua complexidade é O(n²).
+>
+> Numa aplicação real analisaria o contexto e utilizaria provavelmente uma função já testada da biblioteca standard ou um algoritmo mais eficiente, como Quick Sort ou Merge Sort.
+### Comparação resumida
+| Algoritmo        | Complexidade média | Observação                                         |
+| ---------------- | -----------------: | -------------------------------------------------- |
+| Bubble Sort      |            `O(n²)` | Simples, mas pouco eficiente                       |
+| Insertion Sort   |            `O(n²)` | Bom para conjuntos pequenos ou quase ordenados     |
+| Merge Sort       |       `O(n log n)` | Previsível e estável, mas usa memória adicional    |
+| Quick Sort       |       `O(n log n)` | Normalmente rápido, mas pode ter pior caso `O(n²)` |
+| Pesquisa binária |         `O(log n)` | Pesquisa eficiente numa lista ordenada             |
+Não devo dizer apenas que Quick Sort é sempre mais rápido.
+A escolha depende de:
+* dimensão dos dados;
+* estado inicial dos dados;
+* memória disponível;
+* necessidade de estabilidade;
+* pior caso aceitável;
+* existência de uma implementação de biblioteca já validada.
+---
+## Leitura global da segunda entrevista
+### Aspetos positivos
+* Demonstrei gosto genuíno por programação em C.
+* Transmiti experiência técnica.
+* Mostrei capacidade para trabalhar em equipa.
+* Referi experiência em Linux, Git, SQL e sistemas embebidos.
+* Mostrei preocupação com boas práticas.
+* Consegui acompanhar uma conversa parcialmente em francês.
+* Fui honesto relativamente às ferramentas que ainda não conheço.
+* Demonstrei experiência no ensino de algoritmia.
+### Aspetos que poderiam ter sido mais fortes
+* Relacionar a motivação diretamente com a Generali.
+* Demonstrar maior conhecimento sobre a atividade seguradora.
+* Explicar melhor a escolha do Bubble Sort.
+* Dar exemplos recentes e concretos de programação em C.
+* Explicar com maior detalhe um problema técnico que resolvi.
+* Fazer mais perguntas à equipa.
+* Clarificar o trabalho diário dos dois developers de webservices.
+* Clarificar o papel de C, Python e Java no projeto.
+* Perceber melhor o que são SysBasis e API SPG no contexto da Generali.
+### Riscos que a equipa poderá estar a avaliar
+* Tempo decorrido desde a minha última função diária como programador.
+* Rapidez com que recuperarei a prática.
+* Capacidade de trabalhar diariamente em francês.
+* Motivação para manutenção de sistemas existentes.
+* Adaptação a tecnologias e ferramentas internas.
+* Disponibilidade e compromisso de longo prazo.
+* Compatibilidade entre o projeto e outras atividades profissionais.
+---
+# Perguntas que poderia ter feito
+Não seria necessário fazer todas. Duas ou três perguntas bem escolhidas seriam suficientes.
+---
+## Sobre as atividades da Generali
+> Poderiam explicar-me melhor que processos de negócio da Generali são suportados por esta aplicação?
+Em francês:
+> Pourriez-vous m'expliquer quels processus métier de Generali sont supportés par cette application?
+---
+> A aplicação está relacionada com seguros, contratos, poupança, sinistros ou gestão de clientes?
+Em francês:
+> L'application concerne-t-elle les assurances, les contrats, l'épargne, les sinistres ou la gestion des clients?
+---
+> Quem são os principais utilizadores da aplicação?
+Em francês:
+> Qui sont les principaux utilisateurs de l'application?
+---
+## Sobre o trabalho diário
+> Como é um dia típico para um developer nesta equipa?
+Em francês:
+> À quoi ressemble une journée typique pour un développeur dans cette équipe?
+---
+> Qual é a proporção entre correção de bugs, manutenção e desenvolvimento de novas funcionalidades?
+Em francês:
+> Quelle est la proportion entre la correction de bugs, la maintenance et le développement de nouvelles fonctionnalités?
+---
+> Os developers trabalham diretamente com incidentes de produção?
+Em francês:
+> Est-ce que les développeurs travaillent directement sur les incidents de production?
+---
+> Existe rotação de suporte ou prevenção fora do horário normal?
+Em francês:
+> Existe-t-il une rotation de support ou une astreinte en dehors des horaires habituels?
+---
+## Sobre a arquitetura
+> Qual é exatamente o papel do código C na arquitetura?
+Em francês:
+> Quel est exactement le rôle du code C dans l'architecture?
+---
+> O código C implementa regras de negócio, integração, tratamento de dados ou serviços?
+Em francês:
+> Le code C implémente-t-il des règles métier, des intégrations, du traitement de données ou des services?
+---
+> Como comunicam os programas em C com as stored procedures?
+Em francês:
+> Comment les programmes en C communiquent-ils avec les procédures stockées?
+---
+> O que significa API SPG no contexto deste projeto?
+Em francês:
+> Que signifie API SPG dans le contexte de ce projet?
+---
+> Para que é utilizado o SysBasis?
+Em francês:
+> À quoi sert SysBasis dans le projet?
+---
+> Python e Java são utilizados na mesma aplicação ou em componentes separados?
+Em francês:
+> Python et Java sont-ils utilisés dans la même application ou dans des composants séparés?
+---
+## Sobre webservices
+> Os webservices são maioritariamente SOAP, REST ou uma combinação dos dois?
+Em francês:
+> Les webservices sont-ils principalement SOAP, REST ou une combinaison des deux?
+---
+> O código C consome webservices, disponibiliza webservices ou faz ambas as coisas?
+Em francês:
+> Le code C consomme-t-il des webservices, fournit-il des webservices, ou fait-il les deux?
+---
+> Como são testados os webservices?
+Em francês:
+> Comment les webservices sont-ils testés?
+---
+## Sobre qualidade e testes
+> Existem testes unitários e testes de integração automatizados?
+Em francês:
+> Existe-t-il des tests unitaires et des tests d'intégration automatisés?
+---
+> Que ferramentas utilizam para análise estática e deteção de problemas de memória?
+Em francês:
+> Quels outils utilisez-vous pour l'analyse statique et la détection des problèmes de mémoire?
+---
+> Existem normas de programação C definidas pela equipa?
+Em francês:
+> Existe-t-il des normes de programmation C définies par l'équipe?
+---
+> Utilizam ferramentas como Valgrind, sanitizers ou analisadores estáticos?
+Em francês:
+> Utilisez-vous des outils comme Valgrind, les sanitizers ou des analyseurs statiques?
+---
+## Sobre Git, Jira e Jenkins
+> Como está organizado o processo desde a criação de um ticket até à entrada em produção?
+Em francês:
+> Comment le processus est-il organisé depuis la création d'un ticket jusqu'à la mise en production?
+---
+> O código é revisto através de pull requests?
+Em francês:
+> Le code est-il revu à travers des pull requests?
+---
+> Que verificações são realizadas automaticamente no Jenkins?
+Em francês:
+> Quelles vérifications sont exécutées automatiquement dans Jenkins?
+---
+## Sobre a equipa
+> Os cinco developers de C trabalham todos sobre os mesmos componentes ou existem especializações?
+Em francês:
+> Les cinq développeurs C travaillent-ils sur les mêmes composants ou existe-t-il des spécialisations?
+---
+> Como colaboram os developers, QA e BI durante uma tarefa?
+Em francês:
+> Comment les développeurs, le QA et le BI collaborent-ils pendant une tâche?
+---
+> Os dois developers de webservices pertencem à mesma squad ou apoiam várias equipas?
+Em francês:
+> Les deux développeurs webservices appartiennent-ils à la même squad ou assistent-ils plusieurs équipes?
+---
+## Sobre integração e aprendizagem
+> Como é feito o onboarding de um novo developer?
+Em francês:
+> Comment se déroule l'intégration d'un nouveau développeur?
+---
+> Existe documentação técnica e funcional da aplicação?
+Em francês:
+> Existe-t-il une documentation technique et fonctionnelle de l'application?
+---
+> Durante os primeiros meses existe acompanhamento por um developer mais experiente?
+Em francês:
+> Pendant les premiers mois, y a-t-il un accompagnement par un développeur plus expérimenté?
+---
+> Quanto tempo é normalmente necessário para um novo elemento começar a trabalhar de forma autónoma?
+Em francês:
+> Combien de temps faut-il normalement à un nouveau membre pour commencer à travailler de manière autonome?
+---
+## Sobre o francês
+> Qual é o nível de francês necessário no trabalho diário?
+Em francês:
+> Quel niveau de français est nécessaire dans le travail quotidien?
+---
+> As reuniões, os tickets e a documentação são todos em francês?
+Em francês:
+> Les réunions, les tickets et la documentation sont-ils tous en français?
+---
+> É possível utilizar inglês nas primeiras semanas para questões técnicas mais complexas?
+Em francês:
+> Est-il possible d'utiliser l'anglais pendant les premières semaines pour les questions techniques plus complexes?
+---
+## Sobre expectativas
+> O que esperam da pessoa escolhida durante os primeiros três meses?
+Em francês:
+> Qu'attendez-vous de la personne choisie pendant les trois premiers mois?
+---
+> Quais seriam os principais critérios para considerar que a integração foi bem-sucedida?
+Em francês:
+> Quels seraient les principaux critères pour considérer que l'intégration a été réussie?
+---
+> Qual é atualmente o maior desafio técnico da equipa?
+Em francês:
+> Quel est actuellement le principal défi technique de l'équipe?
+---
+# As cinco melhores perguntas para uma próxima conversa
+Caso tenha pouco tempo, devo escolher perguntas como estas:
+1. **Qual é exatamente o papel do código C na arquitetura e nos processos de negócio da Generali?**
+2. **Como é um dia típico para um developer nesta equipa?**
+3. **Qual é a proporção entre manutenção, resolução de incidentes e novas funcionalidades?**
+4. **O que esperam da pessoa escolhida durante os primeiros três meses?**
+5. **Como decorre o onboarding e que acompanhamento técnico existe no início?**
+---
+# Preparação para uma eventual entrevista seguinte
+## Rever tecnicamente
+* [ ] Gestão de memória em C
+* [ ] Ponteiros
+* [ ] Arrays e limites
+* [ ] `malloc`, `calloc`, `realloc` e `free`
+* [ ] Stack e heap
+* [ ] Segmentation faults
+* [ ] Memory leaks
+* [ ] Complexidade de algoritmos
+* [ ] Bubble Sort
+* [ ] Quick Sort
+* [ ] Merge Sort
+* [ ] Pesquisa binária
+* [ ] Compilação com GCC
+* [ ] Makefiles
+* [ ] Debugging com GDB
+* [ ] Valgrind e sanitizers
+* [ ] Git
+* [ ] Stored procedures
+* [ ] SOAP e REST
+* [ ] Linux
+* [ ] Princípios de MISRA C
+## Preparar exemplos concretos
+* [ ] Um problema difícil que resolvi em C
+* [ ] Um erro de memória que investiguei
+* [ ] Uma situação em que trabalhei em equipa
+* [ ] Uma situação em que expliquei uma solução técnica
+* [ ] Um projeto em que tive de aprender rapidamente
+* [ ] Uma melhoria de qualidade ou organização que introduzi
+* [ ] Um conflito técnico resolvido com a equipa
+## Preparar respostas
+* [ ] Porque quero trabalhar neste projeto
+* [ ] Porque quero regressar ao desenvolvimento
+* [ ] Porque a Generali me interessa
+* [ ] O que me motiva para além da linguagem C
+* [ ] Como recuperarei rapidamente a prática diária
+* [ ] Como melhorarei o francês
+* [ ] O que posso oferecer à equipa nos primeiros meses
+---
+# Mensagem principal para a próxima fase
+> Sou um engenheiro experiente, com bases sólidas em C, sistemas embebidos, memória, SQL e resolução de problemas.
+>
+> A docência melhorou a minha capacidade de comunicar, estruturar raciocínios e ajudar equipas a compreender soluções complexas.
+>
+> Quero regressar a um trabalho técnico diário, compreender profundamente o sistema e o negócio da Generali e contribuir com código robusto, responsabilidade, aprendizagem rápida e espírito de equipa.
+
+</details>
+
 # Preparação para Entrevista — Generali France
 
 > **Objetivo:** chegar à entrevista com uma apresentação segura, respostas claras sobre a minha experiência e capacidade para lidar com algumas perguntas em francês.
@@ -43,21 +483,21 @@ A docência e a formação acrescentaram competências úteis:
 
 ## Versão principal
 
-> Bonjour, je m’appelle Belmiro Luís.  
-> Je suis ingénieur en électrotechnique et j’ai une expérience importante dans le développement de logiciels, particulièrement en C, C++, systèmes embarqués et bases de données SQL Server.
+> Bonjour, je m'appelle Belmiro Luís.
+> Je suis ingénieur en électrotechnique et j'ai une expérience importante dans le développement de logiciels, particulièrement en C, C++, systèmes embarqués et bases de données SQL Server.
 >
-> Pendant ma carrière, j’ai également travaillé dans la gestion de projets, la formation et l’enseignement. Ces expériences m’ont permis de développer une bonne capacité de communication, d’analyse et de résolution de problèmes.
+> Pendant ma carrière, j'ai également travaillé dans la gestion de projets, la formation et l'enseignement. Ces expériences m'ont permis de développer une bonne capacité de communication, d'analyse et de résolution de problèmes.
 >
-> Aujourd’hui, je souhaite revenir à un projet de développement logiciel structuré, dans une équipe internationale. Le projet Generali m’intéresse parce qu’il combine technologie, maintenance d’applications critiques et travail en équipe.
+> Aujourd'hui, je souhaite revenir à un projet de développement logiciel structuré, dans une équipe internationale. Le projet Generali m'intéresse parce qu'il combine technologie, maintenance d'applications critiques et travail en équipe.
 
 ## Versão curta
 
-> Bonjour, je m’appelle Belmiro Luís.  
+> Bonjour, je m'appelle Belmiro Luís.
 > Je suis ingénieur en électrotechnique, avec une expérience en C, C++, systèmes embarqués et SQL Server.
 >
-> J’ai également travaillé dans la formation, l’enseignement et la gestion de projets.
+> J'ai également travaillé dans la formation, l'enseignement et la gestion de projets.
 >
-> Aujourd’hui, je souhaite intégrer un projet logiciel stable, structuré et international.
+> Aujourd'hui, je souhaite intégrer un projet logiciel stable, structuré et international.
 
 ## Ideia em português
 
@@ -69,17 +509,17 @@ A docência e a formação acrescentaram competências úteis:
 
 ## Pedir para repetir
 
-> Excusez-moi, pouvez-vous répéter la question, s’il vous plaît?
+> Excusez-moi, pouvez-vous répéter la question, s'il vous plaît?
 
 Desculpe, pode repetir a pergunta?
 
-> Pouvez-vous parler un peu plus lentement, s’il vous plaît?
+> Pouvez-vous parler un peu plus lentement, s'il vous plaît?
 
 Pode falar um pouco mais devagar?
 
 ## Confirmar o que percebi
 
-> Si j’ai bien compris, vous me demandez…
+> Si j'ai bien compris, vous me demandez…
 
 Se percebi corretamente, está a perguntar-me…
 
@@ -89,11 +529,11 @@ Quer saber se…
 
 ## Ganhar alguns segundos
 
-> Je comprends la question, mais j’ai besoin de quelques secondes pour organiser ma réponse.
+> Je comprends la question, mais j'ai besoin de quelques secondes pour organiser ma réponse.
 
 Compreendo a pergunta, mas preciso de alguns segundos para organizar a resposta.
 
-> C’est une bonne question. Je vais essayer de répondre de manière claire.
+> C'est une bonne question. Je vais essayer de répondre de manière claire.
 
 É uma boa pergunta. Vou tentar responder de forma clara.
 
@@ -103,7 +543,7 @@ Compreendo a pergunta, mas preciso de alguns segundos para organizar a resposta.
 
 Não conheço o termo exato em francês, mas posso explicar o conceito em inglês.
 
-> Pour les sujets techniques complexes, je suis plus à l’aise en anglais.
+> Pour les sujets techniques complexes, je suis plus à l'aise en anglais.
 
 Para assuntos técnicos complexos, sinto-me mais confortável em inglês.
 
@@ -121,7 +561,7 @@ Usar a apresentação pessoal.
 
 > Je suis intéressé par ce poste parce que je souhaite revenir au développement logiciel dans un projet stable et structuré.
 >
-> J’apprécie également la possibilité de travailler dans une équipe internationale et de contribuer à des applications importantes pour l’activité de l’entreprise.
+> J'apprécie également la possibilité de travailler dans une équipe internationale et de contribuer à des applications importantes pour l'activité de l'entreprise.
 
 ### Ideia a transmitir
 
@@ -134,7 +574,7 @@ Usar a apresentação pessoal.
 
 ## Pourquoi voulez-vous travailler avec Generali?
 
-> Generali est un groupe international avec une activité importante dans le secteur de l’assurance.
+> Generali est un groupe international avec une activité importante dans le secteur de l'assurance.
 >
 > Je recherche un environnement professionnel stable, avec des projets de long terme, des processus structurés et la possibilité de continuer à apprendre.
 
@@ -154,7 +594,7 @@ Não focar inicialmente salário, deslocações ou benefícios.
 >
 > Je peux comprendre des questions simples et participer à une conversation de base.
 >
-> Pour une discussion technique complexe, je suis plus à l’aise en anglais.
+> Pour une discussion technique complexe, je suis plus à l'aise en anglais.
 >
 > Cependant, je suis motivé pour apprendre et améliorer rapidement mon français.
 
@@ -177,9 +617,9 @@ A formulação correta é:
 
 > Je suis une personne responsable, autonome et organisée dans la résolution de problèmes.
 >
-> J’ai une forte expérience technique, mais aussi une bonne capacité de communication.
+> J'ai une forte expérience technique, mais aussi une bonne capacité de communication.
 >
-> Je peux analyser un problème, rechercher sa cause et expliquer clairement la solution à l’équipe.
+> Je peux analyser un problème, rechercher sa cause et expliquer clairement la solution à l'équipe.
 
 ### Qualidades que posso referir
 
@@ -194,13 +634,13 @@ A formulação correta é:
 
 ---
 
-## Quel est votre principal point d’amélioration?
+## Quel est votre principal point d'amélioration?
 
-> Actuellement, mon principal point d’amélioration est le français.
+> Actuellement, mon principal point d'amélioration est le français.
 >
-> J’ai déjà commencé à le travailler et je suis disponible pour suivre une formation régulière.
+> J'ai déjà commencé à le travailler et je suis disponible pour suivre une formation régulière.
 >
-> Sur le plan technique, je dois également actualiser certains outils, mais j’ai une bonne capacité d’apprentissage.
+> Sur le plan technique, je dois également actualiser certains outils, mais j'ai une bonne capacité d'apprentissage.
 
 ### Regra
 
@@ -212,11 +652,11 @@ Apresentar um ponto real, mas mostrar imediatamente o plano de melhoria.
 
 ## Porque quero regressar ao desenvolvimento?
 
-> Je n’ai jamais réellement quitté la technologie.
+> Je n'ai jamais réellement quitté la technologie.
 >
-> Pendant mes activités de formation et de gestion de projets, j’ai continué à travailler avec la programmation, l’électronique et l’automatisation.
+> Pendant mes activités de formation et de gestion de projets, j'ai continué à travailler avec la programmation, l'électronique et l'automatisation.
 >
-> Aujourd’hui, je souhaite consacrer une plus grande partie de mon activité à un projet logiciel professionnel et de long terme.
+> Aujourd'hui, je souhaite consacrer une plus grande partie de mon activité à un projet logiciel professionnel et de long terme.
 
 ## Em português
 
@@ -226,9 +666,9 @@ Apresentar um ponto real, mas mostrar imediatamente o plano de melhoria.
 
 ## A minha experiência recente em C é suficiente?
 
-> J’ai une expérience solide avec les fondamentaux du C et du C++, particulièrement dans les systèmes embarqués.
+> J'ai une expérience solide avec les fondamentaux du C et du C++, particulièrement dans les systèmes embarqués.
 >
-> Je dois actualiser certaines pratiques et certains outils, mais j’ai de bonnes bases et une forte capacité d’apprentissage.
+> Je dois actualiser certaines pratiques et certains outils, mais j'ai de bonnes bases et une forte capacité d'apprentissage.
 
 ### Resposta mais completa em português
 
@@ -254,7 +694,7 @@ Exemplo:
 
 Em francês:
 
-> Je n’ai pas travaillé récemment avec cet outil spécifique, mais je connais le principe.
+> Je n'ai pas travaillé récemment avec cet outil spécifique, mais je connais le principe.
 >
 > Je commencerais par consulter la documentation, reproduire un cas simple, analyser les logs et valider le comportement avant de modifier le code.
 
@@ -768,7 +1208,7 @@ Debugging é o processo de localizar, compreender e corrigir defeitos.
 - dados pessoais desnecessários;
 - informação bancária;
 - grandes quantidades de dados sem utilidade;
-- mensagens vagas como “erro desconhecido”.
+- mensagens vagas como "erro desconhecido".
 
 ### Níveis de log
 
@@ -990,7 +1430,7 @@ Pode incluir:
 
 Escolher duas ou três.
 
-> Quelle sera la composition de l’équipe?
+> Quelle sera la composition de l'équipe?
 
 Qual será a composição da equipa?
 
@@ -1010,11 +1450,11 @@ Quais são atualmente os principais desafios técnicos do projeto?
 
 Que tecnologias são mais importantes no trabalho diário?
 
-> Comment se déroule l’intégration d’un nouveau membre dans l’équipe?
+> Comment se déroule l'intégration d'un nouveau membre dans l'équipe?
 
 Como decorre a integração de um novo membro na equipa?
 
-> Est-ce qu’une formation en français est prévue ou possible?
+> Est-ce qu'une formation en français est prévue ou possible?
 
 Está prevista ou é possível formação em francês?
 
@@ -1037,8 +1477,8 @@ Está prevista ou é possível formação em francês?
 ## Francês
 
 - [ ] Dizer a apresentação três vezes
-- [ ] Treinar “pode repetir?”
-- [ ] Treinar “pode falar mais devagar?”
+- [ ] Treinar "pode repetir?"
+- [ ] Treinar "pode falar mais devagar?"
 - [ ] Treinar resposta sobre o nível de francês
 - [ ] Treinar resposta sobre a motivação
 - [ ] Treinar resposta sobre o regresso ao desenvolvimento
@@ -1077,11 +1517,11 @@ International team
 ## Frases essenciais
 
 ```text
-Excusez-moi, pouvez-vous répéter la question, s’il vous plaît?
+Excusez-moi, pouvez-vous répéter la question, s'il vous plaît?
 
-Pouvez-vous parler un peu plus lentement, s’il vous plaît?
+Pouvez-vous parler un peu plus lentement, s'il vous plaît?
 
-Si j’ai bien compris, vous me demandez…
+Si j'ai bien compris, vous me demandez…
 
 Je ne connais pas le terme exact en français,
 mais je peux expliquer le concept en anglais.
